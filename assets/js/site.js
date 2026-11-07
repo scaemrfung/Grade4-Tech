@@ -236,7 +236,14 @@
     });
   }
 
+  function initPagePrint() {
+    document.querySelectorAll("[data-print-page]").forEach(function (btn) {
+      btn.addEventListener("click", function () { window.print(); });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    initPagePrint();
     initView();
     initStamps();
     initCurrent();

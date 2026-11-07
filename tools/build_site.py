@@ -35,45 +35,70 @@ def lesson_href(prefix: str, lesson: dict) -> str:
     return f"{prefix}lesson/{lesson['slug']}/"
 
 
+UPDATED_ISO = "2026-11-07"
+UPDATED_TEXT = "7 November 2026"
+
+
+def updated_stamp() -> str:
+    return (
+        f'<p class="updated-stamp" aria-label="Site last updated">'
+        f'<span class="updated-label">Last updated:</span> '
+        f'<time datetime="{UPDATED_ISO}">{UPDATED_TEXT}</time></p>'
+    )
+
+
 def nav(prefix: str, current: str = "") -> str:
-    links = [
-        ("Home", f"{prefix}index.html", "home"),
+    """Top bar plus mobile pills, following the Grade 5 iMovie course layout."""
+    mobile = [
+        ("Year map", f"{prefix}index.html", "home"),
         ("Teacher guide", f"{prefix}guide/", "guide"),
-        ("Lesson 1", f"{prefix}lesson/01/", "lesson"),
+        ("Lesson 1", f"{prefix}lesson/01/", "lesson-01"),
     ]
-    desktop = []
-    mobile = []
-    for label, href, key in links:
-        attrs = ' aria-current="page"' if key == current else ""
-        desktop.append(f'<a href="{href}"{attrs}>{label}</a>')
-        mobile.append(f'<a href="{href}"{attrs}>{label}</a>')
+    pills = "".join(
+        f'<a href="{href}"{' aria-current="page"' if key == current else ''}>{label}</a>'
+        for label, href, key in mobile
+    )
     return f"""
-    <header class="site-header">
-      <div class="wrap header-row">
-        <a class="brand" href="{prefix}index.html">
-          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
-            <rect width="42" height="42" rx="10" fill="#fff7ed"/>
-            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#9a3412"/>
-          </svg>
-          <span>
-            <strong>Grade 4 Tech</strong>
-            <span>Mr. Fung · teacher-led lessons</span>
-          </span>
-        </a>
-        <nav class="nav-links desktop-nav" aria-label="Primary">{''.join(desktop)}</nav>
-        <details class="menu">
-          <summary>Menu</summary>
-          <nav aria-label="Primary mobile">{''.join(mobile)}</nav>
-        </details>
-      </div>
+    <header class="topbar">
+      <a class="brand" href="{prefix}index.html">
+        <span class="logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 42 42"><path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#fff7ed"/></svg>
+        </span>
+        <span>
+          <span class="brand-title">Grade 4 Tech</span>
+          <span class="brand-sub">Mr. Fung · 18 teacher-led lessons · 30 minutes</span>
+        </span>
+      </a>
+      {updated_stamp()}
     </header>
+    <nav class="mobile-nav" aria-label="Mobile">{pills}</nav>
     """
+
+
+def sidebar(prefix: str, current: str = "") -> str:
+    def link(label: str, href: str, key: str, ico: str) -> str:
+        active = key == current
+        cls = "nav-link active" if active else "nav-link"
+        attr = ' aria-current="page"' if active else ""
+        return f'<a class="{cls}" href="{href}"{attr}><span class="nav-ico" aria-hidden="true">{ico}</span> {esc(label)}</a>'
+
+    items = [
+        '<div class="nav-label">Classroom</div>',
+        link("Year map", f"{prefix}index.html", "home", "01"),
+        link("Teacher guide", f"{prefix}guide/", "guide", "02"),
+    ]
+    for unit in UNITS:
+        items.append(f'<div class="nav-label">{esc(unit["name"])}</div>')
+        for lesson in LESSONS:
+            if lesson["unit"] == unit["id"]:
+                items.append(link(lesson["title"], lesson_href(prefix, lesson), f"lesson-{lesson['slug']}", lesson["slug"]))
+    return '<nav class="sidebar no-print" aria-label="Course">' + "".join(items) + "</nav>"
 
 
 def footer(prefix: str) -> str:
     return f"""
     <footer class="site-footer">
-      <div class="wrap">
+      <div class="footer-inner">
         <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps and the current lesson stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
         <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
         <p><a href="{prefix}guide/">Teacher guide</a> · <a href="{PEW}">Grade 4 Physical Education and Wellness</a> · <a href="{ELAL}">Grade 4 English Language Arts and Literature</a> · <a href="{ICT}">ICT program of studies (PDF)</a></p>
@@ -99,9 +124,13 @@ def page(prefix: str, title: str, body: str, current: str = "", extra_head: str 
 <body class="mode-teacher">
   <a class="skip" href="#main">Skip to content</a>
   {nav(prefix, current)}
-  <div class="wrap updated teacher-chrome">Last updated: <time datetime="2026-11-07">7 November 2026</time></div>
-  {body}
-  {footer(prefix)}
+  <div class="shell">
+    {sidebar(prefix, current)}
+    <div class="main-col">
+      {body}
+      {footer(prefix)}
+    </div>
+  </div>
   <script src="{js}"></script>
 </body>
 </html>
@@ -217,6 +246,16 @@ def lesson_page(lesson: dict) -> str:
         if next_lesson
         else "<span></span>"
     )
+    top_prev = (
+        f'<a class="btn-ghost" href="{lesson_href(prefix, previous_lesson)}">← Lesson {previous_lesson["n"]}</a>'
+        if previous_lesson
+        else f'<a class="btn-ghost" href="{prefix}index.html">Year map</a>'
+    )
+    top_next = (
+        f'<a class="btn-primary" href="{lesson_href(prefix, next_lesson)}">Lesson {next_lesson["n"]} →</a>'
+        if next_lesson
+        else f'<a class="btn-primary" href="{prefix}guide/">Teacher guide →</a>'
+    )
     student = f"""
     <section class="card student-face" id="for-students">
       <p class="kicker">For students</p>
@@ -237,10 +276,19 @@ def lesson_page(lesson: dict) -> str:
     </section>
     """
     body = f"""
-    <main id="main" class="wrap lesson-top">
-      <p class="kicker">Lesson {lesson["n"]} of 18 · {esc(kind)}</p>
-      <h1>{esc(lesson["title"])}</h1>
-      <p class="lede teacher-chrome">{esc(lesson["summary"])}</p>
+    <main id="main" class="main lesson-top">
+      <div class="lesson-head">
+        <div>
+          <p class="kicker">Lesson {lesson["n"]} of 18 · 30 minutes · {esc(kind)}</p>
+          <h1>{esc(lesson["title"])}</h1>
+          <p class="lede teacher-chrome">{esc(lesson["summary"])}</p>
+        </div>
+        <div class="head-tools no-print"><button type="button" class="ghost" data-print-page>Print</button></div>
+      </div>
+      <div class="actions no-print">
+        {top_prev}
+        {top_next}
+      </div>
       <dl class="meta-dl teacher-chrome">
         <dt>Grade</dt><dd>Grade 4</dd>
         <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
@@ -331,7 +379,7 @@ def lesson_page(lesson: dict) -> str:
       </nav>
     </main>
     """
-    return page(prefix, f"Lesson {lesson['n']}: {lesson['title']}", body, "lesson")
+    return page(prefix, f"Lesson {lesson['n']}: {lesson['title']}", body, f"lesson-{lesson['slug']}")
 
 
 def home_page() -> str:
@@ -373,12 +421,16 @@ def home_page() -> str:
         )
     first = LESSONS[0]
     body = f"""
-    <main id="main" class="wrap">
-      <section class="hero">
+    <main id="main" class="main">
+      <section class="hero hero-grid">
         <div>
           <p class="kicker">September to June · about every two weeks</p>
           <h1>Thirty-minute lessons you can teach from the page.</h1>
           <p class="lede">Fifteen core lessons and three flex reviews for Grade 4. Teacher-led talk, a made-up scenario, and a check for learning. No Chromebook project, no keyboard unit, and no student accounts.</p>
+          <div class="actions">
+            <a class="btn-primary" href="{lesson_href(prefix, first)}">Teach lesson 1 →</a>
+            <a class="btn-ghost" href="{prefix}guide/">How the class works</a>
+          </div>
           <div class="chip-row">
             <span class="chip">18 lessons</span>
             <span class="chip">6 units</span>
@@ -387,7 +439,7 @@ def home_page() -> str:
           </div>
         </div>
         <div class="panel">
-          <p class="kicker">Current lesson on this device</p>
+          <p class="soft-kicker">Current lesson on this device</p>
           <h2 id="current-label">{esc(first["title"])}</h2>
           <p>The year is a fortnightly map, not a booked calendar. Set the lesson you are actually teaching. That choice stays in this browser.</p>
           <p><a class="primary" id="current-link" href="{lesson_href(prefix, first)}">Open the current lesson</a></p>
@@ -410,7 +462,7 @@ def home_page() -> str:
         <span id="clear-status" aria-live="polite"></span>
       </section>
       <section>
-        <h2>Year map</h2>
+        <h2 id="year-map">Year map</h2>
         <div class="filters">
           <label for="lesson-search">Search</label>
           <input id="lesson-search" type="search" placeholder="Search lessons">
@@ -437,7 +489,7 @@ def home_page() -> str:
 def guide_page() -> str:
     prefix = prefix_for(1)
     body = f"""
-    <main id="main" class="wrap lesson-top">
+    <main id="main" class="main lesson-top">
       <p class="kicker">Read this before the first lesson</p>
       <h1>Teacher guide</h1>
       <p class="lede">This site is the year plan for Grade 4 technology: one teacher-led lesson about every two weeks, September through June. It is not a dated calendar. Set the pace to the school calendar when you know it.</p>
@@ -484,7 +536,7 @@ def not_found() -> str:
   <link rel="stylesheet" href="/Grade4-Tech/assets/css/site.css">
 </head>
 <body>
-  <main id="main" class="wrap lesson-top">
+  <main id="main" class="main lesson-top">
     <h1>That page is not on the site.</h1>
     <p><a id="home" href="/Grade4-Tech/">Back to Grade 4 Tech</a></p>
   </main>
