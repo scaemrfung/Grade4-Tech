@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 6: When the group pushes</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 6 of 18 · Flex · review and reassessment</p>
+      <h1>When the group pushes</h1>
+      <p class="lede teacher-chrome">A flex lesson. Students reassess clear messages and fair chats by coaching a character who is being pushed to send a silly photo.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Kind communication</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Late November. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="06">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="06">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>What can we do when a group pressures us online?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are reviewing how to refuse pressure without a mean reply.</li><li>We are checking that we still pause before a photo or a personal detail.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can name the pressure in a made-up chat.</li><li>I can give the character a short, firm, respectful reply and a next step.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Tell the difference between an invitation and pressure, using a made-up idea.</li><li>Read Devan’s chat.</li><li>Prepare a refusal and a next step.</li></ul>
+      <div class="scenario">
+        <h3>Devan and the silly photo</h3>
+        <p>This story is made up.</p>
+        <p>In a made-up chat, four classmates tell Devan: “Everyone sent a silly photo from their bedroom. If you do not send one, you are out of the group.” Devan does not want to send a photo of home.</p>
+      </div>
+      <p><strong>Check.</strong> What is one firm, respectful sentence Devan can send?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Healthy Relationships: Personal well-being is supported through positive relationships built on communication, collaboration, empathy, and respect.”</p><p class="quote"><strong>Guiding question.</strong> “How can resolving conflict and healthy relationships be mutually supportive?”</p><p class="quote"><strong>Learning outcome.</strong> “Students reflect on resolution and explain connections to healthy relationships.”</p><p class="quote"><strong>Knowledge.</strong> “Conflict resolution can occur by using a variety of strategies, such as creating a safe environment, communicating respectfully, negotiating and compromising, reflecting on actions taken, implementing appropriate solutions, making repeated efforts to solve a problem. Resolution requires personal responsibility and acknowledgement of conflict.”</p><p class="quote"><strong>Understanding.</strong> “Resolution supports healthy relationships.”</p><p class="quote"><strong>Skills and procedures.</strong> “Describe strategies that can be used to support resolution to a problem, conflict, or challenge.”</p>
+              <p>The bullying knowledge in this organizer is taught directly in Lessons 7 to 9. This lesson uses the conflict-resolution knowledge.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">English Language Arts and Literature, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Oral Language: Listening and speaking form the foundation for literacy development and improve communication, collaboration, and respectful mutual understanding.”</p><p class="quote"><strong>Guiding question.</strong> “In what ways can listening and speaking skills clarify intent and build relationships?”</p><p class="quote"><strong>Learning outcome.</strong> “Students examine and demonstrate how listening and speaking support connections and clarify understandings.”</p><p class="quote"><strong>Skills and procedures.</strong> “Contribute respectfully to a variety of interactions that involve listening and speaking.”</p><p class="quote"><strong>Skills and procedures.</strong> “Identify opinions or points of view shared in conversations or texts that are listened to.”</p>
+              <p>The lesson treats an online message as a text the class listens to, then revises aloud. It does not assess a formal presentation.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.3 use appropriate communication language and etiquette”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. The practice is oral. No message is sent.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are reviewing how to refuse pressure without a mean reply.</li><li>We are checking that we still pause before a photo or a personal detail.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can name the pressure in a made-up chat.</li><li>I can give the character a short, firm, respectful reply and a next step.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names the pressure: the group ties belonging to sending a photo.</li><li>Gives a refusal that does not insult the group, plus one safe next step such as leaving the chat or telling an adult.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board: Name it / Refuse / Next step.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Tell the class this is a review and reassessment, not a test score. Passing is allowed.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What is one difference between an invitation and pressure? Think of a made-up example, not a real group.</p></div>
+              <p><strong>Do this.</strong> Look for: an invitation can be declined safely; pressure threatens belonging.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Online pressure can feel bigger because the messages arrive quickly and several people can see a refusal. A useful order is: name the pressure, refuse in a short respectful line, then choose a next step. Next steps include changing the subject, leaving, and telling a trusted adult if you feel unsafe or if they keep pushing. A photo of your face, your home, or your school sign is personal information. You do not owe the group that photo.</p></div>
+              <p><strong>Do this.</strong> Model: “I am not sending a photo. I can still play tomorrow.”</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Coach Devan. Use name it, refuse, and next step. This is a chance to show what you remember from our privacy lessons and our chat lessons. Do not tell a real story.</p></div>
+              <p><strong>Do this.</strong> Pairs coach. Invite two rehearsals aloud. Note who meets both success criteria for your own reassessment notes, with no names on the board.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Say Devan’s refusal in one sentence.</p></div>
+              <p><strong>Do this.</strong> If many refusals are shaky, plan a one-minute redo at the start of Lesson 7. Preview standing up for someone else.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Rehearse one refusal as a class and skip pair coaching.</p>
+          <p><strong>If you have extra time.</strong> Ask what changes if the pressure is to exclude someone, linking back to Priya. The next step may be telling an adult sooner.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>Devan and the silly photo</h3>
+          <p>In a made-up chat, four classmates tell Devan: “Everyone sent a silly photo from their bedroom. If you do not send one, you are out of the group.” Devan does not want to send a photo of home.</p>
+          <ul><li>What is the pressure?</li><li>What can Devan reply?</li><li>What is a safe next step if they keep pushing?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>The pressure says belonging depends on sending a photo of home. That is not a fair invitation.</li><li>A firm reply: “I am not sending a photo. I can talk at school.”</li><li>If they keep pushing, Devan leaves the chat and tells a trusted adult. Sending the photo “just this once” is not the goal.</li><li>A reply such as “you are all losers” refuses, but it is not respectful. Ask for a cleaner line.</li></ul>
+          <p><strong>Quick check.</strong> What is one firm, respectful sentence Devan can send?</p>
+          <p><strong>Look for.</strong> Any refusal that declines the photo without insulting the group. A next step is a bonus.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Students stand in pairs and say the refusal to a partner with voices low. No devices.</p>
+        <h3>Support</h3>
+        <p>Offer three refusal cards and let the student pick one and add a next step.</p>
+        <h3>Extension</h3>
+        <p>Write a second line Devan could send the next day that is friendly and still firm. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>No real photos, no “who is the pushy friend,” no dare to show a phone.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>A student may point to a card sequence instead of speaking in front of the class. Reassessment can be a private sentence to you.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>Treat this as practice. Do not rank students aloud. Do not turn it into a debate about who has social media.</p>
+        <h2>Assessment</h2>
+        <p>This is a planned reassessment of Lessons 1 to 5: pausing on personal details, clear kind words, and including others. Use the success criteria. Descriptive levels, if you use them: Not Yet Meeting if the student tells Devan to send the photo; Minimally Meeting if they refuse but add an insult; Solidifying if they refuse kindly and name a next step; Mastering if they also explain why the photo is personal information. Offer a private redo. No percent grade.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase refusals that include any real name. Thank the class for staying with the character.</p>
+        <h2>Sub notes</h2>
+        <p>Run it as coaching practice. If anyone is distressed, let them pass and tell the classroom teacher after, following school process.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Peer Pressure Online” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How does technology impact peer pressure, and what can I do about it?”. The public page states the essential question and Grade 4 placement. It does not show a duration in the text checked for this site, so no Common Sense duration is claimed.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/peer-pressure-online">https://www.commonsense.org/education/digital-literacy/peer-pressure-online</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-06">Chalkie brief for Grade 4 Tech, Lesson 6: When the group pushes
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Kind communication
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: What can we do when a group pressures us online?
+Objectives:
+- We are reviewing how to refuse pressure without a mean reply.
+- We are checking that we still pause before a photo or a personal detail.
+Suggested slides:
+1. Review question: invitation or pressure?
+2. Name it, refuse, next step.
+3. A photo of home is personal information.
+4. Scenario: Devan’s silly photo.
+5. Rehearse a refusal.
+6. Check: one firm sentence.
+7. Close: you do not owe a photo to stay in a group.
+Original scenario: Devan and the silly photo. In a made-up chat, four classmates tell Devan: “Everyone sent a silly photo from their bedroom. If you do not send one, you are out of the group.” Devan does not want to send a photo of home.
+Discussion:
+- What is the pressure?
+- What can Devan reply?
+- What is a safe next step if they keep pushing?
+Quick assessment: What is one firm, respectful sentence Devan can send?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Peer Pressure Online — https://www.commonsense.org/education/digital-literacy/peer-pressure-online</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="06">Copy brief</button>
+            <span data-copy-status="06" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-06">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-06" data-chalkie-url="06" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="06">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="06" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/05/">Previous: A fair group chat</a>
+        <a class="ghost" href="../../lesson/07/">Next: Be the person who helps</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

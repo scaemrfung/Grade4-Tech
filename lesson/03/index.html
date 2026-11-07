@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 3: Spot the fake message</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 3 of 18 · Core lesson</p>
+      <h1>Spot the fake message</h1>
+      <p class="lede teacher-chrome">Students read a made-up message that pretends to be the school and name the clues that it is a trick.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Privacy and safety</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Early October. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="03">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="03">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>What is phishing, and how can we avoid it?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning how a fake message tries to borrow trust.</li><li>We are learning not to type a password because a message says so.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can name two clues that a message may be fake.</li><li>I can say what to do instead of clicking or typing a password.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Answer the opening question. You may pass.</li><li>Listen once while the made-up message is read.</li><li>Underline the rush, the scare, and the password request.</li><li>Say Jordan’s next move. Do not share a real password.</li></ul>
+      <div class="scenario">
+        <h3>A message pretending to be the school</h3>
+        <p>This story is made up.</p>
+        <p>Made-up message to Jordan: “URGENT from the office. Your school account will be deleted in 10 minutes. Click http://school-prize-login.example and type your password and home address to keep your photos. Do not tell your teacher.”</p>
+      </div>
+      <p><strong>Check.</strong> What are two clues that Jordan’s message is fake, and what should Jordan do?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Safety: A lifetime of optimal well-being is supported by prioritizing health and safety.”</p><p class="quote"><strong>Guiding question.</strong> “How can taking responsibility impact safety?”</p><p class="quote"><strong>Learning outcome.</strong> “Students analyze and explain responsibility and how it can impact personal and group safety.”</p><p class="quote"><strong>Knowledge.</strong> “Responsibility includes making decisions to ensure self or others are not in unsafe and uncomfortable situations.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes the opportunity, ability, or right to act independently or make decisions.”</p><p class="quote"><strong>Skills and procedures.</strong> “Describe responsibility and its impact on personal and group safety in a variety of contexts.”</p><p class="quote"><strong>Knowledge.</strong> “Consent is critical to respecting the rights, feelings, and belongings of others.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes respecting the rights and feelings of others.”</p><p class="quote"><strong>Skills and procedures.</strong> “Identify situations where responsibility supports the rights and feelings of others.”</p><p class="quote"><strong>Knowledge.</strong> “Responsibility occurs in a variety of contexts, such as home, learning environment, community, online. Responsibility includes making decisions when dealing with and handling a variety of substances.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes an awareness of surroundings to determine the safety of a situation.”</p><p class="quote"><strong>Skills and procedures.</strong> “Examine how responsibility can impact safety in a variety of situations.”</p>
+              <p>The knowledge statement names online as one context, and it also names decisions about substances. This lesson works toward the online context only. It does not teach substance safety.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.5 respect the privacy and products of others”</p><p class="quote"><strong>Specific outcome.</strong> “2.6 use electronic networks in an ethical manner”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. Students talk through made-up choices. They do not open accounts or enter information online.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning how a fake message tries to borrow trust.</li><li>We are learning not to type a password because a message says so.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can name two clues that a message may be fake.</li><li>I can say what to do instead of clicking or typing a password.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names at least two clues from the made-up message, such as urgency, a strange link, a threat, or a password request.</li><li>Says the character should not click or type a password, and should tell a trusted adult.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>The message written in large print.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Tell the class the message is invented before you read it, so it does not sound like a real school email.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> If a note said it was from me, but the writing looked wrong, what is one thing you could check before you believed it?</p></div>
+              <p><strong>Do this.</strong> Take two ideas: ask you in person, check the name, do not rush.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Phishing is when someone pretends to be a trusted person or group to trick you into sharing personal information or a password. The message often rushes you, threatens a closed account, or offers a prize. A real school adult will not ask you to type your password into a surprise link. The safe moves are: do not click, do not type, tell a trusted adult.</p></div>
+              <p><strong>Do this.</strong> Show one honest model first: a teacher saying in the room, “Please line up.” No link. No password. Then introduce the fake message as fiction.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> This message is made up. Underline the parts that try to rush or scare Jordan. Then decide Jordan’s next move. Do not mention real passwords, even a hint.</p></div>
+              <p><strong>Do this.</strong> Pairs underline. Build a class list of clues. Ask what Jordan should do if a friend already clicked.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Tell me two clues and one safe move, still about Jordan.</p></div>
+              <p><strong>Do this.</strong> Hear two students. Say that Lesson 4 turns from tricks to how our own words land.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Underline the clues as a whole class. Skip the “friend already clicked” question.</p>
+          <p><strong>If you have extra time.</strong> Ask how Jordan can warn a classmate without forwarding the fake link. Answer to look for: say “do not open it” in person, and tell an adult.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>A message pretending to be the school</h3>
+          <p>Made-up message to Jordan: “URGENT from the office. Your school account will be deleted in 10 minutes. Click http://school-prize-login.example and type your password and home address to keep your photos. Do not tell your teacher.”</p>
+          <ul><li>Which parts try to rush or scare Jordan?</li><li>What is the sender pretending to be?</li><li>What should Jordan do?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Clues: URGENT, a 10-minute threat, a strange link, a password, a home address, and “do not tell your teacher.”</li><li>The sender is pretending to be the office. Pretending to be trusted is the trick.</li><li>Jordan should not click and should not type anything. Jordan should tell a teacher or a trusted adult right away.</li><li>If a friend already clicked, the friend should also tell an adult. Jordan should not open it “just to check.”</li></ul>
+          <p><strong>Quick check.</strong> What are two clues that Jordan’s message is fake, and what should Jordan do?</p>
+          <p><strong>Look for.</strong> Any two clues from the message, plus do not click, do not type, tell a trusted adult.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Read the fake message twice from chart paper. Students raise a hand when they hear a clue.</p>
+        <h3>Support</h3>
+        <p>Number the sentences. Let a student highlight rather than explain every clue.</p>
+        <h3>Extension</h3>
+        <p>Rewrite the message as a real, calm notice the school might actually say, with no link and no password. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>Never ask for a real password, a guess of one, or a family email address.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>Give the three safe moves on a card: don’t click, don’t type, tell an adult. The check can be choosing the card.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>If a child says “that happened to my uncle,” thank them and return to Jordan. Do not collect scam stories.</p>
+        <h2>Assessment</h2>
+        <p>Two clues plus a safe move meets the intention. One clue only is a start. Feedback names the clue they found. Reassess in Lesson 6 with a fresh example if needed.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Cross out the fake link on the board so it cannot be copied later. Shred any printouts the same day.</p>
+        <h2>Sub notes</h2>
+        <p>Read the “this is made up” line first. Do not click any real link a student offers.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Gone Phishing” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “What is phishing, and how can you protect yourself from it?”. The public lesson page lists this Common Sense lesson as about 20 minutes. This page is a 30-minute teacher-led adaptation.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/gone-phishing">https://www.commonsense.org/education/digital-literacy/gone-phishing</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-03">Chalkie brief for Grade 4 Tech, Lesson 3: Spot the fake message
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Privacy and safety
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: What is phishing, and how can we avoid it?
+Objectives:
+- We are learning how a fake message tries to borrow trust.
+- We are learning not to type a password because a message says so.
+Suggested slides:
+1. Question: How can we spot a fake message?
+2. Phishing means pretending to be trusted.
+3. Clues: rush, threat, strange link, password, secret.
+4. Safe moves: don’t click, don’t type, tell an adult.
+5. Scenario: Jordan’s urgent message.
+6. Check: two clues and one move.
+7. Close: a real teacher will not ask for your password in a surprise link.
+Original scenario: A message pretending to be the school. Made-up message to Jordan: “URGENT from the office. Your school account will be deleted in 10 minutes. Click http://school-prize-login.example and type your password and home address to keep your photos. Do not tell your teacher.”
+Discussion:
+- Which parts try to rush or scare Jordan?
+- What is the sender pretending to be?
+- What should Jordan do?
+Quick assessment: What are two clues that Jordan’s message is fake, and what should Jordan do?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Gone Phishing — https://www.commonsense.org/education/digital-literacy/gone-phishing</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="03">Copy brief</button>
+            <span data-copy-status="03" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-03">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-03" data-chalkie-url="03" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="03">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="03" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/02/">Previous: When is sharing a bigger risk?</a>
+        <a class="ghost" href="../../lesson/04/">Next: Say what you mean</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 7: Be the person who helps</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 7 of 18 · Core lesson</p>
+      <h1>Be the person who helps</h1>
+      <p class="lede teacher-chrome">Students learn four original help-moves and apply them to a mild made-up pile-on about a drawing.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Standing up and repairing harm</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Early December. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="07">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="07">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>What can a bystander do when meanness is digital?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning to recognize digital bullying.</li><li>We are learning help-moves that do not make the target more visible in a cruel way.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can say why the made-up comments are bullying.</li><li>I can choose a help-move: notice, check the person is okay, do not pile on, tell a trusted adult.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Offer one helper idea with no real names, or pass.</li><li>Read the story of Morgan’s drawing.</li><li>Choose two help-moves and one move to avoid.</li></ul>
+      <div class="scenario">
+        <h3>Comments under Morgan’s drawing</h3>
+        <p>This story is made up.</p>
+        <p>Morgan posts a made-up drawing of a dog. One classmate comments, “This looks like a baby made it.” Three more laughing comments appear that afternoon and again the next day. A student named Ren sees all of it and has not replied yet.</p>
+      </div>
+      <p><strong>Check.</strong> What are two help-moves Ren can use?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Healthy Relationships: Personal well-being is supported through positive relationships built on communication, collaboration, empathy, and respect.”</p><p class="quote"><strong>Guiding question.</strong> “How can resolving conflict and healthy relationships be mutually supportive?”</p><p class="quote"><strong>Learning outcome.</strong> “Students reflect on resolution and explain connections to healthy relationships.”</p><p class="quote"><strong>Knowledge.</strong> “Bullying is repeated, deliberate, and targeted behaviour with intent to harm. Bullying behaviour can be seen or experienced verbally, socially, relationally, physically, digitally. Roles of individuals in situations of bullying include the bully, the bullied, and the bystander. Actions to address bullying include speaking up, walking away, getting help, safely intervening, reporting the incident.”</p><p class="quote"><strong>Understanding.</strong> “Individuals have the right to live in healthy, safe, and bully-free environments.”</p><p class="quote"><strong>Skills and procedures.</strong> “Recognize harmful bullying behaviours. Identify actions that can be taken when bullying occurs.”</p>
+              <p>The same organizer also includes knowledge about First Nations, Métis, and Inuit events and ceremonies that renew relationships. That knowledge is not the focus of this short block. Do not treat it as a quick add-on.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.3 use appropriate communication language and etiquette”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. Scenarios stay mild and made up.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning to recognize digital bullying.</li><li>We are learning help-moves that do not make the target more visible in a cruel way.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can say why the made-up comments are bullying.</li><li>I can choose a help-move: notice, check the person is okay, do not pile on, tell a trusted adult.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Says the behaviour is repeated or targeted and meant to hurt, using the story.</li><li>Chooses at least two of the four help-moves and avoids a public pile-on against the first commenter.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Four moves on the board.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Explain that nobody will be asked about a real bullying experience. Pass is available. You will not use the words as a joke.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> If you saw a mean comment under a classmate’s drawing, what is one thing a helper might do? Use no real names.</p></div>
+              <p><strong>Do this.</strong> Take two safe ideas. Park revenge and public shaming to correct during the teach.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Bullying is repeated, deliberate, and targeted behaviour with intent to harm. It can happen digitally. Roles include the person doing the harm, the person targeted, and the bystander. An upstander is a bystander who helps. Our four moves are: notice, check the person is okay, do not pile on, tell a trusted adult. Piling on against the commenter can become a new harm. Helping can be quiet.</p></div>
+              <p><strong>Do this.</strong> Write the four moves. Say that Common Sense teaches a framework called S.T.A.N.D.; today we are using our own four moves so we can teach without logging in.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Read about Morgan’s drawing. Decide which moves fit, and which move would make it worse. Stay with the story.</p></div>
+              <p><strong>Do this.</strong> Pairs choose. Hear two plans. Correct any plan that posts Morgan’s name with more jokes, even “supportive” jokes that quote the insult.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Name two help-moves for this story.</p></div>
+              <p><strong>Do this.</strong> Preview Lesson 8: we will watch how this kind of meanness can grow if nobody interrupts it.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Teach the four moves and decide the plan as a whole class.</p>
+          <p><strong>If you have extra time.</strong> Ask what “check the person is okay” sounds like in person: “I saw those comments. You did not deserve that. Do you want to come with me to tell someone?”</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>Comments under Morgan’s drawing</h3>
+          <p>Morgan posts a made-up drawing of a dog. One classmate comments, “This looks like a baby made it.” Three more laughing comments appear that afternoon and again the next day. A student named Ren sees all of it and has not replied yet.</p>
+          <ul><li>Is this bullying? How do you know?</li><li>Which two moves should Ren use?</li><li>What should Ren avoid?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Yes. The comments target Morgan’s work, they are meant to hurt, and they continue the next day. One rude comment is already unkind; the repeat makes the bullying description fit.</li><li>Ren can check on Morgan quietly, refuse to add a laughing comment, and tell a trusted adult. Ren might also say “That is not okay” if it feels safe.</li><li>Ren should not screenshot it to more chats, start a mean reply thread, or force Morgan to talk in front of others.</li></ul>
+          <p><strong>Quick check.</strong> What are two help-moves Ren can use?</p>
+          <p><strong>Look for.</strong> Any two of: notice, check Morgan is okay, do not pile on, tell a trusted adult. A safe short refusal also counts.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Four paper signs around the room are unnecessary. Keep everyone seated and choose moves from the board so nobody is put on display.</p>
+        <h3>Support</h3>
+        <p>The four moves stay visible. Students may hold up fingers 1 to 4.</p>
+        <h3>Extension</h3>
+        <p>Decide who the trusted adult could be in the story: the teacher, a coach, or a family adult. There can be more than one. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>Do not ask who has been bullied. Do not show a real social media post. If a student discloses harm, thank them, stop the class share, and follow safeguarding.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>A student may work alone. Provide a card that already lists the four moves so the task is choosing, not memorizing under pressure.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>No mean voices. No guessing which classmate is “like” the commenter. Reset quickly and calmly.</p>
+        <h2>Assessment</h2>
+        <p>Two fitting help-moves meet the intention. A plan that retaliates is not yet meeting it. Feedback: “You told an adult. The extra public post would put Morgan on display again.” Reassess in Lesson 8.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase the insult from the board so it is not the last thing seen. Keep the four moves if you wish.</p>
+        <h2>Sub notes</h2>
+        <p>Read the safety note before the story. Do not ask for personal experiences. Report disclosures to the school’s usual person the same day.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “S.T.A.N.D. Up to Cyberbullying” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can I be an upstander to cyberbullying?”. The public lesson page lists this Common Sense lesson as about 20 minutes and says students apply a framework called S.T.A.N.D. The letter meanings are inside the teacher-account materials, so they are not repeated here. This page uses an original four-move routine.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/stand-up-to-cyberbullying">https://www.commonsense.org/education/digital-literacy/stand-up-to-cyberbullying</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-07">Chalkie brief for Grade 4 Tech, Lesson 7: Be the person who helps
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Standing up and repairing harm
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: What can a bystander do when meanness is digital?
+Objectives:
+- We are learning to recognize digital bullying.
+- We are learning help-moves that do not make the target more visible in a cruel way.
+Suggested slides:
+1. Question: What can a bystander do?
+2. Bullying can be digital, repeated, and targeted.
+3. Four moves: notice, check, don’t pile on, tell an adult.
+4. Common Sense calls a related framework S.T.A.N.D. We are using our own moves today.
+5. Scenario: Morgan’s drawing.
+6. Check: two moves.
+7. Close: helping can be quiet.
+Original scenario: Comments under Morgan’s drawing. Morgan posts a made-up drawing of a dog. One classmate comments, “This looks like a baby made it.” Three more laughing comments appear that afternoon and again the next day. A student named Ren sees all of it and has not replied yet.
+Discussion:
+- Is this bullying? How do you know?
+- Which two moves should Ren use?
+- What should Ren avoid?
+Quick assessment: What are two help-moves Ren can use?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: S.T.A.N.D. Up to Cyberbullying — https://www.commonsense.org/education/digital-literacy/stand-up-to-cyberbullying</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="07">Copy brief</button>
+            <span data-copy-status="07" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-07">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-07" data-chalkie-url="07" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="07">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="07" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/06/">Previous: When the group pushes</a>
+        <a class="ghost" href="../../lesson/08/">Next: How a small meanness grows</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>
