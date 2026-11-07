@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Grade 4 Tech</title>
+  <link rel="stylesheet" href="/Grade4-Tech/assets/css/site.css">
+</head>
+<body>
+  <main id="main" class="wrap lesson-top">
+    <h1>That page is not on the site.</h1>
+    <p><a id="home" href="/Grade4-Tech/">Back to Grade 4 Tech</a></p>
+  </main>
+  <script>
+    (function () {
+      var onPages = location.pathname.indexOf("/Grade4-Tech/") !== -1;
+      var home = onPages ? "/Grade4-Tech/" : "/";
+      var css = home + "assets/css/site.css";
+      document.getElementById("home").setAttribute("href", home);
+      var link = document.querySelector("link");
+      if (!onPages && link) link.setAttribute("href", css);
+    })();
+  </script>
+</body>
+</html>

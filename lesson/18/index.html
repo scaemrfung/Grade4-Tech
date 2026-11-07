@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 18: Habits that look after feelings</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 18 of 18 · Core lesson</p>
+      <h1>Habits that look after feelings</h1>
+      <p class="lede teacher-chrome">Students name feelings in a made-up evening and choose one planned pause. The year closes with a short reassessment menu.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Healthy tech habits</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>June. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="18">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="18">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can we notice a feeling about tech and choose a small habit?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning to name a feeling in a tech moment.</li><li>We are learning one small habit: a planned pause or a switch to something device-free.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can name a feeling in the made-up evening.</li><li>I can choose a pause that does not need a device.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Give a feeling word for a character, not a diary of yourself.</li><li>Read Luca’s evening.</li><li>Choose a pause from the list and say when Luca would use it.</li></ul>
+      <div class="scenario">
+        <h3>Luca’s one more video</h3>
+        <p>This story is made up.</p>
+        <p>Luca finishes a made-up homework comic, watches one funny clip, then says “one more” many times. At the end Luca feels tired, a bit wound up, and annoyed at stopping. None of the clip titles matter.</p>
+      </div>
+      <p><strong>Check.</strong> What feeling fits Luca at the end, and what is one pause?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Character Development: Exploration of life opportunities and virtues develops resilience and personal talents and promotes lifelong learning.”</p><p class="quote"><strong>Guiding question.</strong> “How can a variety of life experiences influence resilience and perseverance?”</p><p class="quote"><strong>Learning outcome.</strong> “Students interpret how resilience and perseverance can be influenced by a variety of life experiences.”</p><p class="quote"><strong>Knowledge.</strong> “Strategies that support resilience include identifying a purpose, seeking positive role models, focusing on the solution instead of the challenge, breaking down tasks into smaller, achievable goals.”</p><p class="quote"><strong>Understanding.</strong> “Resilience may result in the increased ability to respond to future adversity. Resilience is supported by development of perseverance over time.”</p><p class="quote"><strong>Skills and procedures.</strong> “Describe strategies that support resilience.”</p>
+              <p>The outcome does not name technology or screen time. This lesson uses a made-up tech moment so students can describe a resilience strategy: focusing on the solution instead of the challenge.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will understand the role of technology as it applies to self, work and society.”</p><p class="quote"><strong>Specific outcome.</strong> “2.4 assess the personal significance of having limitless access to information provided by communication networks, such as the Internet”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. The talk is about feelings and a planned pause. It is not an ergonomics or keyboarding lesson, and it does not collect a screen-time diary.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning to name a feeling in a tech moment.</li><li>We are learning one small habit: a planned pause or a switch to something device-free.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can name a feeling in the made-up evening.</li><li>I can choose a pause that does not need a device.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names a feeling that fits the story, such as tired, wound up, or stuck.</li><li>Chooses a specific pause from the class list and says when it would happen.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board list: stretch, draw, read, talk, get a drink of water, lights-out story.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Say you will not ask how many hours anyone spends on a screen. No diaries.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Name a feeling a person might have after “one more video” turns into many. Use a character, not yourself. One word is enough.</p></div>
+              <p><strong>Do this.</strong> Collect a few feeling words. Add tired or stuck if the class only says happy.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Tech can be fun and it can leave us tired, left out, or unable to stop. A healthy habit is a choice we can repeat. One habit is a planned pause: we decide the stopping point before the next video, or we switch to a device-free few minutes. Focusing on the solution means picking the pause while we are still calm enough to choose. We will not track anyone’s real evening.</p></div>
+              <p><strong>Do this.</strong> Model: “After two videos I will stretch and then read.” The number is the character’s plan, not a rule for every home.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Read Luca’s evening. Name the feeling at the end and choose a pause Luca could have set earlier. Then, if you want, pick a pause you could use this week without telling us your real screen habits.</p></div>
+              <p><strong>Do this.</strong> Pairs do Luca first. Sharing a personal plan is optional and must stay general. No hours, no app names if that invites comparison.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What feeling shows up in Luca’s story, and what is one pause?</p></div>
+              <p><strong>Do this.</strong> Close the year: remind the class of pause on personal information, kind repairs, checking claims, and fair posts. Invite anyone who wants a one-minute reassessment of an earlier skill to ask you this week. No new project.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Do Luca as a class. Skip the optional personal pause.</p>
+          <p><strong>If you have extra time.</strong> Run a three-question year menu orally: What is a safe move with a password request? What is a fair move if a chat leaves someone out? What do we do before we share a huge claim? Hear volunteers. This is reassessment, not a test grade.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>Luca’s one more video</h3>
+          <p>Luca finishes a made-up homework comic, watches one funny clip, then says “one more” many times. At the end Luca feels tired, a bit wound up, and annoyed at stopping. None of the clip titles matter.</p>
+          <ul><li>What feeling fits the end of the story?</li><li>What pause could Luca set earlier?</li><li>When would Luca use it?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Tired, wound up, stuck, or annoyed all fit. Happy alone misses the end of the story.</li><li>A specific pause: after the homework and one clip, Luca stretches and reads, or gets a drink and tells a family adult the plan.</li><li>The pause is chosen before the second “one more,” not after feeling awful.</li><li>A class rule that every home must do the same thing is too strong. The habit is Luca’s plan in the story, and any personal plan shared aloud stays optional.</li></ul>
+          <p><strong>Quick check.</strong> What feeling fits Luca at the end, and what is one pause?</p>
+          <p><strong>Look for.</strong> Tired, wound up, stuck, or annoyed, plus a specific device-free pause such as stretch, draw, read, or talk.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Feeling cards drawn on the board. Students point. The pause list is already tech-free.</p>
+        <h3>Support</h3>
+        <p>The pause list is a menu. Choosing from it is a complete answer.</p>
+        <h3>Extension</h3>
+        <p>Write Luca’s plan as a single spoken sentence the class could remember. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>No screen-time totals, bedtimes, family rules, or medical details. Do not set a homework diary.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>A student may match a feeling card to the story and point to one pause. Optional personal sharing stays optional.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>Stop comparison talk (“I stay up later”). Return to Luca. Thank general plans.</p>
+        <h2>Assessment</h2>
+        <p>Feeling plus a timed pause meets the intention. “Just stop being addicted” is not a Grade 4 success and should be redirected to a specific pause. The extra-time menu reassesses earlier lessons with descriptive feedback only. Levels, if used, describe the Luca answer: Not Yet Meeting if they cannot name a feeling or a pause; Minimally Meeting if the pause is vague (“be good”); Solidifying if feeling and pause are specific; Mastering if they also say when Luca chooses it. No percent. No names in any file you make from this public site.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase any personal plan you wrote. Keep the room as you found it. There is nothing to hand in.</p>
+        <h2>Sub notes</h2>
+        <p>Do not assign a screen diary. The made-up evening is sufficient. Tell the teacher if a child discloses a serious worry.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Healthy Tech Habits &amp; Our Feelings” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can I recognize and respond to my feelings about media and tech use?”. The public page states the essential question and Grade 4 placement. A duration was not shown in the text checked for this site, so none is claimed.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/healthy-tech-habits-our-feelings">https://www.commonsense.org/education/digital-literacy/healthy-tech-habits-our-feelings</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-18">Chalkie brief for Grade 4 Tech, Lesson 18: Habits that look after feelings
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Healthy tech habits
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can we notice a feeling about tech and choose a small habit?
+Objectives:
+- We are learning to name a feeling in a tech moment.
+- We are learning one small habit: a planned pause or a switch to something device-free.
+Suggested slides:
+1. Question: What habit looks after a feeling?
+2. Name the feeling.
+3. A planned pause is a solution-sized step.
+4. Menu: stretch, draw, read, talk, water, story.
+5. Scenario: Luca.
+6. Check.
+7. Close the year: pause, kindness, check the claim, be fair. No diary.
+Original scenario: Luca’s one more video. Luca finishes a made-up homework comic, watches one funny clip, then says “one more” many times. At the end Luca feels tired, a bit wound up, and annoyed at stopping. None of the clip titles matter.
+Discussion:
+- What feeling fits the end of the story?
+- What pause could Luca set earlier?
+- When would Luca use it?
+Quick assessment: What feeling fits Luca at the end, and what is one pause?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Healthy Tech Habits &amp; Our Feelings — https://www.commonsense.org/education/digital-literacy/healthy-tech-habits-our-feelings</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="18">Copy brief</button>
+            <span data-copy-status="18" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-18">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-18" data-chalkie-url="18" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="18">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="18" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/17/">Previous: Swap the thought</a>
+        <span></span>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

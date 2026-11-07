@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 11: Pause before you believe it</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 11 of 18 · Core lesson</p>
+      <h1>Pause before you believe it</h1>
+      <p class="lede teacher-chrome">Students use an original four-check on a made-up claim and learn where Common Sense’s S.I.F.T. lesson fits.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Credible information and media</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Late February. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="11">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="11">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can we tell if an online claim is credible?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning to pause before believing or sharing a big claim.</li><li>We are learning to ask who is saying it and where a more reliable source would be.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can spot a claim that needs checking.</li><li>I can name a better place to look, or a person to ask, before sharing.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Give one reason to pause on a huge claim.</li><li>Read GameFox’s post.</li><li>Use pause, who, better source, and exact claim.</li><li>Decide if Avery should share it.</li></ul>
+      <div class="scenario">
+        <h3>The homework post</h3>
+        <p>This story is made up.</p>
+        <p>Made-up post on a chat, author name “GameFox,” no other source: “Scientists say homework is now illegal in Alberta. Share this before the teachers delete it!!” Avery’s thumb is over the share button.</p>
+      </div>
+      <p><strong>Check.</strong> Should Avery share the post yet? Why?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">English Language Arts and Literature, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Text Forms and Structures: Identifying and applying text forms and structures improves understanding of content, literary style, and our rich language traditions.”</p><p class="quote"><strong>Guiding question.</strong> “How can text organization influence communication?”</p><p class="quote"><strong>Learning outcome.</strong> “Students examine how the form and structure of texts can support the communication of ideas and information.”</p><p class="quote"><strong>Knowledge.</strong> “Non-fiction texts can share opinions regarding information.”</p><p class="quote"><strong>Skills and procedures.</strong> “Discuss a variety of facts and opinions expressed in non-fiction texts.”</p><p class="quote"><strong>Learning outcome.</strong> “Students construct and organize text to share perspectives and develop creative expression.”</p><p class="quote"><strong>Knowledge.</strong> “Ethical use of information includes asking permission to use, share, or store information, acknowledging the ownership of information used to inform writing (citing), fair and accurate representation of individuals or information.”</p><p class="quote"><strong>Understanding.</strong> “Research processes involve investigating materials or information to uncover facts and support problem solving.”</p><p class="quote"><strong>Skills and procedures.</strong> “Access information from a variety of sources to critically answer questions or expand knowledge.”</p><p class="quote"><strong>Skills and procedures.</strong> “Demonstrate how information can be ethically shared, using a variety of methods or tools.”</p><p class="quote"><strong>Skills and procedures.</strong> “Choose and cite appropriate sources of information to inform research.”</p><p class="quote"><strong>Learning outcome.</strong> “Students investigate strategies and connections that support text comprehension.”</p><p class="quote"><strong>Knowledge.</strong> “Inferencing involves multiple critical-thinking skills, including considering cause-and-effect relationships, answering personal wonderings, combining information from various sources to draw conclusions, reading between the lines to discover the author’s meaning.”</p><p class="quote"><strong>Skills and procedures.</strong> “Combine information from various sources to draw conclusions.”</p>
+              <p>Checking a claim is the target. Students do not start a research project or a cited report.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will critically assess information accessed through the use of a variety of technologies.”</p><p class="quote"><strong>Specific outcome.</strong> “2.2 recognize that information serves different purposes and that data from electronic sources may need to be verified to determine accuracy or relevance for the purpose used”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. The source is a made-up post read aloud. Students are not asked to search the internet in class.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning to pause before believing or sharing a big claim.</li><li>We are learning to ask who is saying it and where a more reliable source would be.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can spot a claim that needs checking.</li><li>I can name a better place to look, or a person to ask, before sharing.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Says the homework claim should not be shared yet.</li><li>Gives a reason: the source is a nameless post, the claim is huge, or an official school or government source has not been checked.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board: Pause / Who / Better source / Exact claim.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Tell students they will not search the internet in this lesson. Thinking is the work.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> If a post said school was cancelled forever, what is one reason to pause? No real rumours from our school, please.</p></div>
+              <p><strong>Do this.</strong> Take two reasons: big claim, unknown author, we can ask the office.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> A claim is something someone says is true. Credible means it can be trusted after we check. Our four-check is: Pause. Who is saying it? Is there a better source? What is the exact claim? A better source might be the school office, a teacher, or an official public website such as the province’s site. Common Sense teaches a method called S.I.F.T. You can open that lesson with your teacher account. Today we will use our four-check so we are not guessing their letters.</p></div>
+              <p><strong>Do this.</strong> Model a small true-looking sentence: “The gym is cold today.” Who could know? Someone who was just there. It is a small claim, easy to check.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Run the four-check on this made-up post. Decide if Avery should share it. Do not look it up on a phone.</p></div>
+              <p><strong>Do this.</strong> Pairs use the four words on the board. Hear one four-check aloud.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Should Avery share the post yet? Why or why not, in one sentence?</p></div>
+              <p><strong>Do this.</strong> Preview purpose: next time we ask what the creator wants us to do.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Run the four-check together. Pairs only answer “share or not.”</p>
+          <p><strong>If you have extra time.</strong> Change the post so it might be credible: “The office notice on the classroom door says early dismissal Friday.” Ask what Avery should still do. Look for: read the notice, ask the teacher.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>The homework post</h3>
+          <p>Made-up post on a chat, author name “GameFox,” no other source: “Scientists say homework is now illegal in Alberta. Share this before the teachers delete it!!” Avery’s thumb is over the share button.</p>
+          <ul><li>What is the exact claim?</li><li>Who is saying it?</li><li>Is there a better source?</li><li>Should Avery share it yet?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>The claim is that homework is now illegal in Alberta. That is huge and specific.</li><li>The only speaker is a nameless chat user. No scientist, school, or government source is shown.</li><li>A better check would be a teacher, the school office, or an official government or school notice. Friends resharing is not a better source.</li><li>Avery should not share it yet. Pause is the correct move.</li></ul>
+          <p><strong>Quick check.</strong> Should Avery share the post yet? Why?</p>
+          <p><strong>Look for.</strong> No. The source is unknown and the claim is large. Avery should ask a teacher or check an official notice.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>The post lives on chart paper. Students tap the unknown author and the huge claim.</p>
+        <h3>Support</h3>
+        <p>Leave the four words visible. Accept “ask the teacher” as the better source.</p>
+        <h3>Extension</h3>
+        <p>Underline the exact claim and separate it from the excited emoji language. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>Do not repeat live rumours about the school, students, or families.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>Read the post aloud twice. A student may answer only “share or wait.”</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>If someone pulls out a phone, thank them and say the check is on paper today.</p>
+        <h2>Assessment</h2>
+        <p>“Do not share yet” plus a reason meets the intention. Sharing because “it would be funny” does not. Feedback: “You paused. Add who would be a better source.” Reassess with the extra-time example or in Lesson 12’s purpose talk.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Cross out the fake post so it is not copied into a notebook as a fact.</p>
+        <h2>Sub notes</h2>
+        <p>Do not tell students the claim is a real law. It is fiction for practice. If they ask, say you would check an official source before believing it.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “S.I.F.T. for Sources” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can we tell if the information we see online is credible?”. The public lesson page lists this Common Sense lesson as about 20 minutes and names the S.I.F.T. method. The public page checked for this site does not spell out the four letters, so this lesson does not invent them. It uses an original four-check.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/sift-for-sources">https://www.commonsense.org/education/digital-literacy/sift-for-sources</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-11">Chalkie brief for Grade 4 Tech, Lesson 11: Pause before you believe it
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Credible information and media
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can we tell if an online claim is credible?
+Objectives:
+- We are learning to pause before believing or sharing a big claim.
+- We are learning to ask who is saying it and where a more reliable source would be.
+Suggested slides:
+1. Question: How do we pause before a claim?
+2. Four-check: Pause, Who, Better source, Exact claim.
+3. Credible means it can stand up to a check.
+4. Common Sense teaches S.I.F.T. We are not guessing the letters.
+5. Scenario: the homework post.
+6. Check: share yet?
+7. Close: funny is not the same as true.
+Original scenario: The homework post. Made-up post on a chat, author name “GameFox,” no other source: “Scientists say homework is now illegal in Alberta. Share this before the teachers delete it!!” Avery’s thumb is over the share button.
+Discussion:
+- What is the exact claim?
+- Who is saying it?
+- Is there a better source?
+- Should Avery share it yet?
+Quick assessment: Should Avery share the post yet? Why?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: S.I.F.T. for Sources — https://www.commonsense.org/education/digital-literacy/sift-for-sources</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="11">Copy brief</button>
+            <span data-copy-status="11" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-11">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-11" data-chalkie-url="11" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="11">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="11" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/10/">Previous: How media aims at feelings</a>
+        <a class="ghost" href="../../lesson/12/">Next: Persuade, inform, or entertain</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

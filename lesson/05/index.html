@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 5: A fair group chat</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 5 of 18 · Core lesson</p>
+      <h1>A fair group chat</h1>
+      <p class="lede teacher-chrome">Students look at a made-up group chat and choose inclusive moves that do not spread the hurt further.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Kind communication</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Early November. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="05">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="05">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can we be a good friend when a group leaves someone out?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning that a group chat can leave someone out even when nobody says a mean sentence.</li><li>We are learning moves that include the person and do not spread a screenshot.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can say how the left-out character might feel.</li><li>I can choose a move that includes them or gets adult help.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Answer the thumbs question. A real chat is not required.</li><li>Read Priya’s story.</li><li>Choose a helpful move and name a move that would make it worse.</li></ul>
+      <div class="scenario">
+        <h3>The game plan without Priya</h3>
+        <p>This story is made up.</p>
+        <p>Sam, Ari, and Jules are in a made-up group chat planning a weekend floor-hockey game. Priya, who usually plays, is not in the chat. Ari writes, “Don’t add Priya. It is funnier with just us.” Sam feels uneasy and has a screenshot.</p>
+      </div>
+      <p><strong>Check.</strong> What is one move that helps Priya, and one move that spreads the hurt?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Healthy Relationships: Personal well-being is supported through positive relationships built on communication, collaboration, empathy, and respect.”</p><p class="quote"><strong>Guiding question.</strong> “How can resolving conflict and healthy relationships be mutually supportive?”</p><p class="quote"><strong>Learning outcome.</strong> “Students reflect on resolution and explain connections to healthy relationships.”</p><p class="quote"><strong>Knowledge.</strong> “Conflict resolution can occur by using a variety of strategies, such as creating a safe environment, communicating respectfully, negotiating and compromising, reflecting on actions taken, implementing appropriate solutions, making repeated efforts to solve a problem. Resolution requires personal responsibility and acknowledgement of conflict.”</p><p class="quote"><strong>Understanding.</strong> “Resolution supports healthy relationships.”</p><p class="quote"><strong>Skills and procedures.</strong> “Describe strategies that can be used to support resolution to a problem, conflict, or challenge.”</p>
+              <p>The bullying knowledge in this organizer is taught directly in Lessons 7 to 9. This lesson uses the conflict-resolution knowledge.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">English Language Arts and Literature, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Oral Language: Listening and speaking form the foundation for literacy development and improve communication, collaboration, and respectful mutual understanding.”</p><p class="quote"><strong>Guiding question.</strong> “In what ways can listening and speaking skills clarify intent and build relationships?”</p><p class="quote"><strong>Learning outcome.</strong> “Students examine and demonstrate how listening and speaking support connections and clarify understandings.”</p><p class="quote"><strong>Skills and procedures.</strong> “Contribute respectfully to a variety of interactions that involve listening and speaking.”</p><p class="quote"><strong>Skills and procedures.</strong> “Identify opinions or points of view shared in conversations or texts that are listened to.”</p>
+              <p>The lesson treats an online message as a text the class listens to, then revises aloud. It does not assess a formal presentation.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.3 use appropriate communication language and etiquette”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. The practice is oral. No message is sent.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning that a group chat can leave someone out even when nobody says a mean sentence.</li><li>We are learning moves that include the person and do not spread a screenshot.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can say how the left-out character might feel.</li><li>I can choose a move that includes them or gets adult help.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names the harm as being left out, not as “just a small chat.”</li><li>Chooses at least one fair move: add them, check in at school, or tell a trusted adult if it keeps happening. Does not recommend forwarding a screenshot to more people.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board: Include / Check in / Get help.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Groups of three if the room allows, otherwise pairs. Roles can be rotated.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Is it possible to hurt someone in a group chat without using a mean word? Thumbs up, down, or sideways. We will use a made-up story, not a real chat.</p></div>
+              <p><strong>Do this.</strong> Take two ideas. Accept “leaving someone out” if it comes up; if not, teach it next.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> A group chat feels public and fast. Leaving one friend off the plan can hurt more because several people saw it. A good friend notices. You can add the person, check in face to face, and refuse to pass on a screenshot. If it happens again, or if you feel unsure, tell a trusted adult. You do not have to solve it alone.</p></div>
+              <p><strong>Do this.</strong> Write the three moves. Model a calm check-in: “We planned the game without you. Want to be in the next one?”</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Read Priya’s story. In your group, say how Priya might feel, what Sam could do today, and what would make it worse. Do not describe a real group you are in.</p></div>
+              <p><strong>Do this.</strong> Listen to two groups. Stop any suggestion to post the screenshot “so everyone sees.”</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What is one move that helps Priya, and one move that would spread the hurt?</p></div>
+              <p><strong>Do this.</strong> Close by naming Lesson 6 as a review if the group starts pushing someone to join in.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Skip group talk and do the three moves as a class on one story.</p>
+          <p><strong>If you have extra time.</strong> Ask what Sam should do if Priya says “I am fine” but still looks left out. Look for: respect the answer, leave the door open, and still not spread the chat.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>The game plan without Priya</h3>
+          <p>Sam, Ari, and Jules are in a made-up group chat planning a weekend floor-hockey game. Priya, who usually plays, is not in the chat. Ari writes, “Don’t add Priya. It is funnier with just us.” Sam feels uneasy and has a screenshot.</p>
+          <ul><li>How might Priya feel if this continues?</li><li>What can Sam do today?</li><li>What would make it worse?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Priya may feel confused, left out, or embarrassed. The harm is exclusion, even without a name-calling word.</li><li>Sam can say in the chat “I am adding Priya,” check in with Priya at school, and refuse to forward the screenshot. If Ari pushes again, Sam tells a trusted adult.</li><li>Worse moves: forwarding the screenshot, laughing, or telling Priya “everyone thinks you are annoying.”</li></ul>
+          <p><strong>Quick check.</strong> What is one move that helps Priya, and one move that spreads the hurt?</p>
+          <p><strong>Look for.</strong> Help: add Priya, check in, or tell an adult. Spread: forward the screenshot or gossip about it.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Three students may hold role cards: Priya, Sam, and the chat. They read only the printed lines.</p>
+        <h3>Support</h3>
+        <p>Sentence starters: “Priya might feel…” “Sam could…” “A worse move would be…”</p>
+        <h3>Extension</h3>
+        <p>Write the exact words Sam could say at recess, in one or two sentences. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>No real group names, no screenshots from home, no ranking of classmates.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>A student who finds social talk hard can be the move-chooser from a list of three rather than inventing wording.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>If the class points at a real person, interrupt: “We are on Priya, who is made up.” Reset seats if needed.</p>
+        <h2>Assessment</h2>
+        <p>Including or getting help meets the intention. Laughing it off as nothing does not. Feedback: “You noticed Priya was missing. Add what Sam does next.” Reassess in Lesson 6.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Collect role cards. Do not leave a student’s real name on a role card.</p>
+        <h2>Sub notes</h2>
+        <p>Keep the story fictional. If a student discloses ongoing exclusion, follow school safeguarding and offer a private check-in later, not a class discussion.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Group Chat Dynamics” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can I be a good friend in online spaces?”. The public lesson page lists this Common Sense lesson as about 20 minutes. This page is a 30-minute teacher-led adaptation.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/group-chat-dynamics">https://www.commonsense.org/education/digital-literacy/group-chat-dynamics</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-05">Chalkie brief for Grade 4 Tech, Lesson 5: A fair group chat
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Kind communication
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can we be a good friend when a group leaves someone out?
+Objectives:
+- We are learning that a group chat can leave someone out even when nobody says a mean sentence.
+- We are learning moves that include the person and do not spread a screenshot.
+Suggested slides:
+1. Question: How can a group chat leave someone out?
+2. Three moves: include, check in, get help.
+3. Screenshot warning: do not spread it.
+4. Scenario: the game plan without Priya.
+5. Discussion.
+6. Check: one help, one harm.
+7. Close: you do not have to fix it alone.
+Original scenario: The game plan without Priya. Sam, Ari, and Jules are in a made-up group chat planning a weekend floor-hockey game. Priya, who usually plays, is not in the chat. Ari writes, “Don’t add Priya. It is funnier with just us.” Sam feels uneasy and has a screenshot.
+Discussion:
+- How might Priya feel if this continues?
+- What can Sam do today?
+- What would make it worse?
+Quick assessment: What is one move that helps Priya, and one move that spreads the hurt?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Group Chat Dynamics — https://www.commonsense.org/education/digital-literacy/group-chat-dynamics</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="05">Copy brief</button>
+            <span data-copy-status="05" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-05">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-05" data-chalkie-url="05" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="05">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="05" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/04/">Previous: Say what you mean</a>
+        <a class="ghost" href="../../lesson/06/">Next: When the group pushes</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

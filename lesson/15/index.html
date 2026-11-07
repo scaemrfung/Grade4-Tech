@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 15: Their reputation is not ours to spend</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 15 of 18 · Core lesson</p>
+      <h1>Their reputation is not ours to spend</h1>
+      <p class="lede teacher-chrome">Students decide whether a character should post a teammate’s mistake, using fairness and permission.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Footprints and reputation</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Late April. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="15">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="15">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can we think about others when we share?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning that a reputation is the story people believe about someone.</li><li>We are learning that we are responsible for the part we publish.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can say how a post could change the story people believe about a teammate.</li><li>I can choose a fair action that does not publish the mistake.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Say who adds a chapter when someone posts.</li><li>Read Sasha’s choice.</li><li>Pick a fair action and a reason.</li></ul>
+      <div class="scenario">
+        <h3>The missed shot</h3>
+        <p>This story is made up.</p>
+        <p>Sasha filmed a made-up floor-hockey practice. A teammate missed an open net, then scored on the next try. Friends want Sasha to post only the miss with the caption “Watch this forever.” The teammate does not know the clip exists.</p>
+      </div>
+      <p><strong>Check.</strong> What is one fair choice for Sasha?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">English Language Arts and Literature, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Writing: Ideas and information can be articulated accurately and imaginatively through the use of writing processes and an understanding of the author’s craft.”</p><p class="quote"><strong>Guiding question.</strong> “How can development of writing processes and expression support effective communication?”</p><p class="quote"><strong>Learning outcome.</strong> “Students construct and organize text to share perspectives and develop creative expression.”</p><p class="quote"><strong>Knowledge.</strong> “Ethical use of information includes asking permission to use, share, or store information, acknowledging the ownership of information used to inform writing (citing), fair and accurate representation of individuals or information.”</p><p class="quote"><strong>Understanding.</strong> “Research processes involve investigating materials or information to uncover facts and support problem solving.”</p><p class="quote"><strong>Skills and procedures.</strong> “Access information from a variety of sources to critically answer questions or expand knowledge.”</p><p class="quote"><strong>Skills and procedures.</strong> “Demonstrate how information can be ethically shared, using a variety of methods or tools.”</p><p class="quote"><strong>Skills and procedures.</strong> “Choose and cite appropriate sources of information to inform research.”</p>
+              <p>The learning outcome is about constructing text. This lesson works toward the ethical-use knowledge: permission, ownership, and fair representation. Students do not publish a piece today.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.5 respect the privacy and products of others”</p><p class="quote"><strong>Specific outcome.</strong> “2.6 use electronic networks in an ethical manner”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. Footprint talk stays on a made-up example.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning that a reputation is the story people believe about someone.</li><li>We are learning that we are responsible for the part we publish.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can say how a post could change the story people believe about a teammate.</li><li>I can choose a fair action that does not publish the mistake.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Refuses the post, or allows only a kind report to a coach in person.</li><li>Explains the effect on the teammate’s reputation, not only on likes.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board: Fair / Unfair to publish.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Link to last lesson in one sentence: some tracks are other people’s stories.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Reputation is the story people believe about a person. Who gets to add a chapter to that story when we post? Take two ideas. No real teammates.</p></div>
+              <p><strong>Do this.</strong> Land on: the poster adds a chapter, and the person in the post has to live with it.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> We are responsible for a fair and accurate picture of other people. A mistake in a game is a small moment. A post can make it the whole story. Asking permission matters, and even a yes does not make a mean post fair. A better share celebrates a repair: the teammate tried again. Private help, like telling a coach in person, is different from entertaining a chat.</p></div>
+              <p><strong>Do this.</strong> Model a fair line: “Great second try.” Model an unfair line: “Watch this miss forever.”</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Decide what Sasha should do with the clip. Give a reason about reputation. Stay with the made-up team.</p></div>
+              <p><strong>Do this.</strong> Pairs choose. Require a reason. Hear a refusal and, if offered, the coach-in-person option. Do not play or mime a humiliating miss.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What is one fair choice for Sasha?</p></div>
+              <p><strong>Do this.</strong> Preview feelings and thinking traps. The unit shifts from what we publish to how tech habits feel.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Choose fair or unfair as a class for three possible actions listed in the answer key.</p>
+          <p><strong>If you have extra time.</strong> Ask what Sasha should say if friends insist “it is funny.” Look for a firm, kind refusal from Lesson 6.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>The missed shot</h3>
+          <p>Sasha filmed a made-up floor-hockey practice. A teammate missed an open net, then scored on the next try. Friends want Sasha to post only the miss with the caption “Watch this forever.” The teammate does not know the clip exists.</p>
+          <ul><li>What story would that post tell?</li><li>What are Sasha’s fair choices?</li><li>Does a later “just kidding” fix the reputation?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>The post would tell the story that the teammate is a joke, and hide the recovery. That is not a fair picture.</li><li>Fair choices: do not post the miss; ask before posting anything; if posting, use the second try and a kind caption; talk to a coach in person only if there is a real safety or teamwork need, not for laughs.</li><li>“Just kidding” later does not collect every copy and does not undo the first story people saw.</li></ul>
+          <p><strong>Quick check.</strong> What is one fair choice for Sasha?</p>
+          <p><strong>Look for.</strong> Do not post the miss. Other fair choices: ask first, post the second try kindly, or speak to a coach in person if needed.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Read three possible actions. Thumbs up only for actions that are fair to publish.</p>
+        <h3>Support</h3>
+        <p>Sentence starter: “This would make people believe…”</p>
+        <h3>Extension</h3>
+        <p>Write the caption that would be fair if Sasha posts the second try instead. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>No real game clips, no naming a clumsy classmate, no slow-motion acting of a mistake.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>Offer the three actions as cards to sort before open talk.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>Shut down laughter at the miss immediately and calmly. Return to the fair caption.</p>
+        <h2>Assessment</h2>
+        <p>A fair choice plus a reputation reason meets the intention. Posting because it will get likes does not. Feedback: “You protected the teammate. That is the responsibility.” This also reassesses Lesson 14’s permission idea.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase unfair captions. Do not leave “watch this miss” on the board.</p>
+        <h2>Sub notes</h2>
+        <p>If the class cannot stay kind, stop the scenario and teach only the two model captions. Tell the classroom teacher.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Online Reputations &amp; Our Responsibilities” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can we think about others when we share online?”. The public page describes the lesson as a reflection on responsibility to ourselves and others. A duration was not shown in the text checked for this site, so none is claimed. The lesson title on this site is original.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/online-reputations-our-responsibilities">https://www.commonsense.org/education/digital-literacy/online-reputations-our-responsibilities</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-15">Chalkie brief for Grade 4 Tech, Lesson 15: Their reputation is not ours to spend
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Footprints and reputation
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can we think about others when we share?
+Objectives:
+- We are learning that a reputation is the story people believe about someone.
+- We are learning that we are responsible for the part we publish.
+Suggested slides:
+1. Question: Whose story are we publishing?
+2. Reputation is the story people believe.
+3. Fair and accurate. Ask first.
+4. Model captions.
+5. Scenario: the missed shot.
+6. Check.
+7. Close: a joke caption can become the whole story.
+Original scenario: The missed shot. Sasha filmed a made-up floor-hockey practice. A teammate missed an open net, then scored on the next try. Friends want Sasha to post only the miss with the caption “Watch this forever.” The teammate does not know the clip exists.
+Discussion:
+- What story would that post tell?
+- What are Sasha’s fair choices?
+- Does a later “just kidding” fix the reputation?
+Quick assessment: What is one fair choice for Sasha?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Online Reputations &amp; Our Responsibilities — https://www.commonsense.org/education/digital-literacy/online-reputations-our-responsibilities</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="15">Copy brief</button>
+            <span data-copy-status="15" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-15">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-15" data-chalkie-url="15" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="15">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="15" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/14/">Previous: Tracks we can steer</a>
+        <a class="ghost" href="../../lesson/16/">Next: Spot the thinking trap</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 1: What counts as personal information?</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 1 of 18 · Core lesson</p>
+      <h1>What counts as personal information?</h1>
+      <p class="lede teacher-chrome">Students sort made-up clues into “points to a person” and “too general,” then decide what a character should do with a request for personal details.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Privacy and safety</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Early September. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="01">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="01">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>Which details can point to one particular person?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning which details can point to one person.</li><li>We are learning a safe move when someone asks for those details.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can tell a general fact from a detail that points to one person.</li><li>I can say “pause and ask a trusted adult” when a message asks for personal details.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Listen to the made-up clues. Use thumbs up or thumbs down.</li><li>Read Sam’s message with your partner.</li><li>Sort each line: share, pause, or tell a trusted adult.</li><li>Be ready to say what Sam should do. You do not need to share anything about yourself.</li></ul>
+      <div class="scenario">
+        <h3>Sam’s team-chat message</h3>
+        <p>This story is made up.</p>
+        <p>A made-up message arrives for Sam, a Grade 4 character: “Hi, it’s Alex from the other team. Send your full name, the name of your school, your home address, a picture in your jersey, and your favourite colour so I can add you.”</p>
+      </div>
+      <p><strong>Check.</strong> If a game asks for a home address, what is one safe move?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Safety: A lifetime of optimal well-being is supported by prioritizing health and safety.”</p><p class="quote"><strong>Guiding question.</strong> “How can taking responsibility impact safety?”</p><p class="quote"><strong>Learning outcome.</strong> “Students analyze and explain responsibility and how it can impact personal and group safety.”</p><p class="quote"><strong>Knowledge.</strong> “Responsibility includes making decisions to ensure self or others are not in unsafe and uncomfortable situations.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes the opportunity, ability, or right to act independently or make decisions.”</p><p class="quote"><strong>Skills and procedures.</strong> “Describe responsibility and its impact on personal and group safety in a variety of contexts.”</p><p class="quote"><strong>Knowledge.</strong> “Consent is critical to respecting the rights, feelings, and belongings of others.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes respecting the rights and feelings of others.”</p><p class="quote"><strong>Skills and procedures.</strong> “Identify situations where responsibility supports the rights and feelings of others.”</p><p class="quote"><strong>Knowledge.</strong> “Responsibility occurs in a variety of contexts, such as home, learning environment, community, online. Responsibility includes making decisions when dealing with and handling a variety of substances.”</p><p class="quote"><strong>Understanding.</strong> “Responsibility includes an awareness of surroundings to determine the safety of a situation.”</p><p class="quote"><strong>Skills and procedures.</strong> “Examine how responsibility can impact safety in a variety of situations.”</p>
+              <p>The knowledge statement names online as one context, and it also names decisions about substances. This lesson works toward the online context only. It does not teach substance safety.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.5 respect the privacy and products of others”</p><p class="quote"><strong>Specific outcome.</strong> “2.6 use electronic networks in an ethical manner”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. Students talk through made-up choices. They do not open accounts or enter information online.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning which details can point to one person.</li><li>We are learning a safe move when someone asks for those details.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can tell a general fact from a detail that points to one person.</li><li>I can say “pause and ask a trusted adult” when a message asks for personal details.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names at least two kinds of details that can point to a person, using the made-up examples.</li><li>Chooses pause and a trusted adult for the character, and does not suggest typing a home address or sending a photo.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This lesson page, or the scenario written on the board.</li><li>Board headings: Points to a person / Too general.</li><li>The on-page timer, or any classroom timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Pairs as they already sit. No devices on desks.</li><li>Agree a pass signal, such as a hand flat on the desk.</li><li>Leave the bottom of the board clear so no real names get written.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> I will read three made-up clues. Thumbs up if a stranger could use the clue to find one particular student. Thumbs down if it is too general. Do not call out your own address, full name, school, or photo.</p></div>
+              <p><strong>Do this.</strong> Read: “A Grade 4 student who likes recess.” “A photo of a child in a green jersey under a sign that shows a school name.” “Someone who has a dog.” Take two reasons, then write the headings.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Personal information is a detail, or a mix of details, that can point to one person. Teachers sometimes call this personally identifiable information. A favourite game by itself usually cannot. A full name, a clear photo, a school name, a home address, a phone number, or an email address often can, especially together. We protect it by pausing before we type it into a game, a chat, or a form. A trusted adult at home or at school can help. We will not collect anyone’s real details today.</p></div>
+              <p><strong>Do this.</strong> Model the jersey photo: the jersey alone is weak; the school sign makes it point to a place and a person. Underline “pause” and “trusted adult.”</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Stay with my made-up message. Do not switch to a real one from your life. With your partner, sort each line: share, pause, or tell a trusted adult. You have thinking time first.</p></div>
+              <p><strong>Do this.</strong> Post the scenario. Pairs sort. Collect two sorts. If someone offers a real address, stop, thank them, erase it, and return to the character.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Finish this sentence about the character, not about yourself: Personal information is dangerous to type when it can point to one person, so Sam should…</p></div>
+              <p><strong>Do this.</strong> Hear two answers. Preview Lesson 2: next time we ask when a request is riskier.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> If time is short, do the sort together on the board and skip the pair share.</p>
+          <p><strong>If you have extra time.</strong> If you have a few extra minutes, add one more made-up line: “What is your favourite colour?” Guide the class to see that this one is usually too general.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>Sam’s team-chat message</h3>
+          <p>A made-up message arrives for Sam, a Grade 4 character: “Hi, it’s Alex from the other team. Send your full name, the name of your school, your home address, a picture in your jersey, and your favourite colour so I can add you.”</p>
+          <ul><li>Which lines point to one person?</li><li>Which line is usually too general?</li><li>What should Sam do next?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Full name, school, home address, and jersey photo can point to a person. Together they are more than enough.</li><li>Favourite colour is usually too general.</li><li>Sam should not send the photo, school, or address. Sam should leave the chat request and tell a trusted adult. A friendly reply about the game is optional and still leaves the personal details out.</li><li>If a student says “just send the first name,” reply that even a first name plus a school and a photo can point to someone. The safe move is still to pause.</li></ul>
+          <p><strong>Quick check.</strong> If a game asks for a home address, what is one safe move?</p>
+          <p><strong>Look for.</strong> Pause and do not type it. Ask a trusted adult. Leaving the screen is also a sound answer.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>The lesson is already tech-free. If the projector fails, read the script and write the five lines on chart paper.</p>
+        <h3>Support</h3>
+        <p>Give the sentence starter: “This points to a person because…” Allow a student to point instead of speak. Offer the pair role of timekeeper.</p>
+        <h3>Extension</h3>
+        <p>Ask what Sam could say that is friendly and still safe, such as talking about the game without sending a photo or a school name. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>Do not ask who has a phone, an account, or a photo online.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>Read the message aloud. A student may answer in a home language first, then share one English word with a partner’s help. Provide a printed copy of the five lines for a student who needs the text still.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>Thirty seconds of quiet thinking before talk. Two voices at a time. Pass is a full answer. Praise staying with the character.</p>
+        <h2>Assessment</h2>
+        <p>Listen for the two success criteria during the sort and the closing sentence. A strong answer names a detail and a safe move. A partial answer sorts only the obvious address line. Descriptive feedback: “You spotted the photo. Next time, add what Sam should do.” Revisit anyone who is unsure in Lesson 2 or Lesson 6.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase the board. Do not photograph student work. If you used sticky notes, they should have no names; shred them the same day.</p>
+        <h2>Sub notes</h2>
+        <p>You can teach this from the page. Keep every example made up. If a student reports a real worrying message, follow the school safeguarding process and do not investigate in front of the class.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Personally Identifiable Information” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “What is personally identifiable information, and how can I protect it?”. The public lesson page lists this Common Sense lesson as about 20 minutes. This page is a 30-minute teacher-led adaptation.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/personally-identifiable-information">https://www.commonsense.org/education/digital-literacy/personally-identifiable-information</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-01">Chalkie brief for Grade 4 Tech, Lesson 1: What counts as personal information?
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Privacy and safety
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: Which details can point to one particular person?
+Objectives:
+- We are learning which details can point to one person.
+- We are learning a safe move when someone asks for those details.
+Suggested slides:
+1. Title and question: Which details can point to one person?
+2. Intention: We can sort general facts from personal details.
+3. Teach: personal information points to one person. Pause. Ask a trusted adult.
+4. Scenario: Sam’s team-chat message, five lines.
+5. Discussion: sort share, pause, or tell an adult.
+6. Check: one safe move if a game asks for an address.
+7. Close: we do not type real personal details in class.
+Original scenario: Sam’s team-chat message. A made-up message arrives for Sam, a Grade 4 character: “Hi, it’s Alex from the other team. Send your full name, the name of your school, your home address, a picture in your jersey, and your favourite colour so I can add you.”
+Discussion:
+- Which lines point to one person?
+- Which line is usually too general?
+- What should Sam do next?
+Quick assessment: If a game asks for a home address, what is one safe move?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Personally Identifiable Information — https://www.commonsense.org/education/digital-literacy/personally-identifiable-information</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="01">Copy brief</button>
+            <span data-copy-status="01" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-01">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-01" data-chalkie-url="01" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="01">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="01" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <span></span>
+        <a class="ghost" href="../../lesson/02/">Next: When is sharing a bigger risk?</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 8: How a small meanness grows</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 8 of 18 · Flex · review and reassessment</p>
+      <h1>How a small meanness grows</h1>
+      <p class="lede teacher-chrome">A flex reassessment. Students map how Morgan’s drawing incident could grow, and where someone could interrupt it.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Standing up and repairing harm</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>January, after the break. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="08">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="08">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can online meanness escalate?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning how a single comment can grow when people forward, pile on, or stay silent.</li><li>We are reassessing the help-moves from last time.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can put the made-up events in an order that shows the harm growing.</li><li>I can point to one place where a helper could interrupt it.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Answer why a comment might feel bigger the next day.</li><li>Put the four events in order.</li><li>Mark where Ren could interrupt.</li></ul>
+      <div class="scenario">
+        <h3>Four events, out of order</h3>
+        <p>This story is made up.</p>
+        <p>Event cards, made up: A) Three more people add laughing comments the next day. B) One classmate writes “This looks like a baby made it” under Morgan’s dog drawing. C) Someone screenshots the comments into another chat. D) Morgan sees the screenshot again at recess and stops drawing.</p>
+      </div>
+      <p><strong>Check.</strong> What is one reason the meanness can grow, and one early interruption?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Physical Education and Wellness, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Healthy Relationships: Personal well-being is supported through positive relationships built on communication, collaboration, empathy, and respect.”</p><p class="quote"><strong>Guiding question.</strong> “How can resolving conflict and healthy relationships be mutually supportive?”</p><p class="quote"><strong>Learning outcome.</strong> “Students reflect on resolution and explain connections to healthy relationships.”</p><p class="quote"><strong>Knowledge.</strong> “Bullying is repeated, deliberate, and targeted behaviour with intent to harm. Bullying behaviour can be seen or experienced verbally, socially, relationally, physically, digitally. Roles of individuals in situations of bullying include the bully, the bullied, and the bystander. Actions to address bullying include speaking up, walking away, getting help, safely intervening, reporting the incident.”</p><p class="quote"><strong>Understanding.</strong> “Individuals have the right to live in healthy, safe, and bully-free environments.”</p><p class="quote"><strong>Skills and procedures.</strong> “Recognize harmful bullying behaviours. Identify actions that can be taken when bullying occurs.”</p>
+              <p>The same organizer also includes knowledge about First Nations, Métis, and Inuit events and ceremonies that renew relationships. That knowledge is not the focus of this short block. Do not treat it as a quick add-on.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will demonstrate a moral and ethical approach to the use of technology.”</p><p class="quote"><strong>Specific outcome.</strong> “2.3 use appropriate communication language and etiquette”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. Scenarios stay mild and made up.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning how a single comment can grow when people forward, pile on, or stay silent.</li><li>We are reassessing the help-moves from last time.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can put the made-up events in an order that shows the harm growing.</li><li>I can point to one place where a helper could interrupt it.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Orders at least three steps so the harm gets bigger, not smaller.</li><li>Names an interruption that uses a help-move rather than revenge.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Four event strips on the board, out of order.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Keep Morgan’s story fictional. Remind the class of the four moves without asking for a real example.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Why might a mean comment feel bigger the next day than it did in the first minute? Use the idea, not a real event.</p></div>
+              <p><strong>Do this.</strong> Look for: more people saw it, it is still there, screenshots travel.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Online meanness can escalate. Escalate means it grows. A comment can be copied, more people can add on, and the target can see it again and again. Silence can also let it grow. Interrupting early is kinder than trying to collect every copy later. You still should not become a new person doing harm.</p></div>
+              <p><strong>Do this.</strong> Show two steps only: one comment, then a screenshot in another chat. Ask what changed. The audience got bigger.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> These four events are out of order. Put them in an order that shows the harm growing. Then mark the earliest place Ren could interrupt. This shows me what you remember. It is not a percent score.</p></div>
+              <p><strong>Do this.</strong> Pairs order the strips. Hear one order. Ask for the interruption.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What is one reason online meanness can grow, and one early interruption?</p></div>
+              <p><strong>Do this.</strong> If the interruption is missing, model it once more. Preview repairing the friendship.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Order the events as a class. Pairs only choose the interruption.</p>
+          <p><strong>If you have extra time.</strong> Ask what Ren should do if the comments have already spread. Look for: tell an adult, support Morgan privately, and do not keep forwarding.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>Four events, out of order</h3>
+          <p>Event cards, made up: A) Three more people add laughing comments the next day. B) One classmate writes “This looks like a baby made it” under Morgan’s dog drawing. C) Someone screenshots the comments into another chat. D) Morgan sees the screenshot again at recess and stops drawing.</p>
+          <ul><li>What order shows the harm growing?</li><li>Where is the earliest interruption?</li><li>What move belongs there?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>A sound order is B, C, A, D or B, A, C, D. The key is that B starts it and D shows the effect. C makes the audience bigger.</li><li>The earliest interruption is right after B: Ren does not laugh, checks on Morgan, and tells a trusted adult before the screenshot spreads.</li><li>Revenge, such as insulting the commenter in a new chat, is not the interruption we are practising.</li></ul>
+          <p><strong>Quick check.</strong> What is one reason the meanness can grow, and one early interruption?</p>
+          <p><strong>Look for.</strong> It grows because more people see it, copy it, or add on. An early interruption is to refuse to pile on and tell a trusted adult, and to check on Morgan.</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Read the four events and have the class vote on which comes first, second, third, and fourth.</p>
+        <h3>Support</h3>
+        <p>Number a correct order after a first try so a student can focus on the interruption.</p>
+        <h3>Extension</h3>
+        <p>Add a fifth made-up event that de-escalates the harm, such as an adult helping Morgan and the comment being removed. The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>Do not invite “the worst thing you have seen.” Keep the strips mild.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>Give the events already in order to a student who needs the thinking load on the help-move only. That is still a valid reassessment of helping.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>No contest for the most dramatic ending. Thank plain, safe answers.</p>
+        <h2>Assessment</h2>
+        <p>Reassessment of Lesson 7. Not Yet Meeting: the order shrinks the harm or the interruption is revenge. Minimally Meeting: order is right but no interruption. Solidifying: order and a help-move. Mastering: explains that the audience grew. Descriptive feedback only. A student may try the interruption sentence privately.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Take the event strips down. Do not leave the insult posted.</p>
+        <h2>Sub notes</h2>
+        <p>Treat wrong orders as information, not a public correction that embarrasses. Model the early interruption if the class misses it.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “How Online Meanness Escalates” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How can online meanness escalate?”. The public page states the essential question and Grade 4 placement. A duration was not shown in the text checked for this site, so none is claimed.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/how-online-meanness-escalates">https://www.commonsense.org/education/digital-literacy/how-online-meanness-escalates</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-08">Chalkie brief for Grade 4 Tech, Lesson 8: How a small meanness grows
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Standing up and repairing harm
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can online meanness escalate?
+Objectives:
+- We are learning how a single comment can grow when people forward, pile on, or stay silent.
+- We are reassessing the help-moves from last time.
+Suggested slides:
+1. Question: How can meanness grow?
+2. Audience, copies, and time.
+3. Interrupt early. Do not start a new harm.
+4. Four events out of order.
+5. Find the earliest help.
+6. Check.
+7. Close: silence can let it grow.
+Original scenario: Four events, out of order. Event cards, made up: A) Three more people add laughing comments the next day. B) One classmate writes “This looks like a baby made it” under Morgan’s dog drawing. C) Someone screenshots the comments into another chat. D) Morgan sees the screenshot again at recess and stops drawing.
+Discussion:
+- What order shows the harm growing?
+- Where is the earliest interruption?
+- What move belongs there?
+Quick assessment: What is one reason the meanness can grow, and one early interruption?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: How Online Meanness Escalates — https://www.commonsense.org/education/digital-literacy/how-online-meanness-escalates</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="08">Copy brief</button>
+            <span data-copy-status="08" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-08">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-08" data-chalkie-url="08" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="08">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="08" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/07/">Previous: Be the person who helps</a>
+        <a class="ghost" href="../../lesson/09/">Next: Mend the friendship</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>

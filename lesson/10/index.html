@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 10: How media aims at feelings</title>
+  <meta name="description" content="Fortnightly 30-minute Grade 4 technology lessons for Alberta teachers. No Chromebook project. Teach from the page.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  
+</head>
+<body class="mode-teacher">
+  <a class="skip" href="#main">Skip to content</a>
+  
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="../../index.html">
+          <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
+            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+          </svg>
+          <span>
+            <strong>Grade 4 Tech</strong>
+            <span>Mr. Fung · teacher-led lessons</span>
+          </span>
+        </a>
+        <nav class="nav-links desktop-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Primary mobile"><a href="../../index.html">Home</a><a href="../../guide/">Teacher guide</a><a href="../../lesson/01/" aria-current="page">Lesson 1</a></nav>
+        </details>
+      </div>
+    </header>
+    
+  
+    <div class="timer-bar" id="timer">
+      <div class="wrap timer-inner">
+        <div>
+          <div class="time-readout" id="time-readout">05:00</div>
+          <div id="segment-name">Opening</div>
+        </div>
+        <button type="button" class="primary" id="timer-toggle">Start</button>
+        <button type="button" class="ghost" id="timer-reset">Reset</button>
+        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
+        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
+        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
+        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
+        <p id="timer-live" class="sr-live" aria-live="polite"></p>
+      </div>
+    </div>
+    <main id="main" class="wrap lesson-top">
+      <p class="kicker">Lesson 10 of 18 · Core lesson</p>
+      <h1>How media aims at feelings</h1>
+      <p class="lede teacher-chrome">Students study a made-up game ad and name the feeling it aims for and the tricks that create it.</p>
+      <dl class="meta-dl teacher-chrome">
+        <dt>Grade</dt><dd>Grade 4</dd>
+        <dt>Subject</dt><dd>Technology infused into the host subject named below</dd>
+        <dt>Unit</dt><dd>Credible information and media</dd>
+        <dt>Time</dt><dd>30 minutes</dd>
+        <dt>Location</dt><dd>Regular classroom. No student devices.</dd>
+        <dt>Suggested block</dt><dd>Early February. Approximate only, about every two weeks from September to June.</dd>
+      </dl>
+      <div class="toolbar no-print">
+        <button type="button" class="primary" data-view="teacher" aria-pressed="true">Teacher view</button>
+        <button type="button" class="ghost" data-view="student" aria-pressed="false">Student view</button>
+        <button type="button" class="ghost" data-stamp="10">Stamp this lesson</button>
+        <button type="button" class="ghost" data-make-current="10">Set as current lesson</button>
+        <button type="button" class="ghost" id="print-student">Print student card</button>
+        <a class="ghost" href="#sequence">Jump to script</a>
+        <a class="ghost" href="#chalkie">Chalkie brief</a>
+      </div>
+      <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
+      <p id="current-status" aria-live="polite"></p>
+      
+    <section class="card student-face" id="for-students">
+      <p class="kicker">For students</p>
+      <h2>Today’s lesson</h2>
+      <p>How can a media text try to make us feel something?</p>
+      <h3>We are learning</h3>
+      <ul><li>We are learning that media is made on purpose.</li><li>We are learning to name a feeling a text aims for, and one trick it uses.</li></ul>
+      <h3>I can</h3>
+      <ul><li>I can name a feeling the made-up ad wants.</li><li>I can point to one choice the creator made, such as the words, the crowd, or the dare.</li></ul>
+      <h3>What to do</h3>
+      <ul><li>Think about the opening question. Do not name a show from home.</li><li>Read the made-up ad.</li><li>Name a feeling and the creator’s choice.</li></ul>
+      <div class="scenario">
+        <h3>The “Only winners” ad</h3>
+        <p>This story is made up.</p>
+        <p>Made-up ad: A picture of cheering kids, a glowing controller, and the words “Only winners play SkyDash. Losers log off. Your friends are already in.” There is no price and no real company.</p>
+      </div>
+      <p><strong>Check.</strong> What feeling does the ad want, and which words help create it?</p>
+    </section>
+    
+      <article class="teacher-only">
+        <h2>Curriculum outcomes</h2>
+        <p>Quoted wording is copied from the Grade 4 course on new LearnAlberta, retrieved 7 November 2026, or from the ICT program of studies named in the link. This lesson works toward the host outcome. It does not claim the outcome is fully achieved.</p>
+        
+            <section class="panel">
+              <p class="kicker">Host subject</p>
+              <h3><a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">English Language Arts and Literature, Grade 4</a></h3>
+              <p class="quote"><strong>Organizing idea.</strong> “Text Forms and Structures: Identifying and applying text forms and structures improves understanding of content, literary style, and our rich language traditions.”</p><p class="quote"><strong>Guiding question.</strong> “How can text organization influence communication?”</p><p class="quote"><strong>Learning outcome.</strong> “Students examine how the form and structure of texts can support the communication of ideas and information.”</p><p class="quote"><strong>Knowledge.</strong> “Texts can be communicated for a variety of purposes, including to inform, persuade, provide enjoyment. Media texts can be digital or non-digital and can combine sounds, words, images, and graphics.”</p><p class="quote"><strong>Understanding.</strong> “Text form or structure can support the enjoyment and communication of ideas and information for a variety of purposes.”</p><p class="quote"><strong>Skills and procedures.</strong> “Confirm the author’s or text creator’s purpose based on information in the text.”</p>
+              <p>The full Grade 4 knowledge statement also includes genre, literary forms, and narrative structure. Those parts are not the target today.</p>
+            </section>
+            
+            <section class="panel">
+              <p class="kicker">ICT Division 2, working toward</p>
+              <h3><a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">Information and Communication Technology (K–12), 2000–2003</a></h3>
+              <p class="quote"><strong>General outcome.</strong> “Students will become discerning consumers of mass media and electronic information.”</p><p class="quote"><strong>Specific outcome.</strong> “2.1 recognize that graphics, video and sound enhance communication”</p><p class="quote"><strong>Specific outcome.</strong> “2.2 describe how the use of various texts and graphics can alter perception”</p>
+              <p>Information and Communication Technology is infused into the host subject. The class is working toward the Division 2 outcome below. This 30-minute block does not achieve it. The class studies a short made-up text written on the board. No video is required.</p>
+            </section>
+            
+        <h2>Learning intentions</h2>
+        <ul><li>We are learning that media is made on purpose.</li><li>We are learning to name a feeling a text aims for, and one trick it uses.</li></ul>
+        <h3>I can statements students see</h3>
+        <ul><li>I can name a feeling the made-up ad wants.</li><li>I can point to one choice the creator made, such as the words, the crowd, or the dare.</li></ul>
+        <h2>Success criteria / evidence of learning</h2>
+        <ul><li>Names a plausible feeling, such as excitement, worry about being left out, or a wish to win.</li><li>Links that feeling to a specific part of the ad.</li></ul>
+        <h2>Materials and prep</h2>
+        <ul><li>This page.</li><li>Board: Feeling / Creator’s choice.</li><li>Timer.</li></ul>
+        <p>No Chromebooks, no student logins, and no device project. A projector is optional. The page is the lesson.</p>
+        <h2>Room or space setup</h2>
+        <ul><li>Say that students will not be asked what media has upset them. They may pass.</li></ul>
+        <h2 id="sequence">Lesson sequence (timed)</h2>
+        <p>The four parts total 30 minutes: 5 + 8 + 12 + 5.</p>
+        <ol class="steps">
+            <li>
+              <h3>Opening question · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Can a poster make a person feel excited without the person choosing that feeling first? Thumbs, then one reason. No show or game titles from home.</p></div>
+              <p><strong>Do this.</strong> Accept yes, because music, faces, and words are chosen by a creator.</p>
+            </li>
+            
+            <li>
+              <h3>Explain and model · 8 min</h3>
+              <div class="say"><p><strong>Say this.</strong> A media text can be digital or not, and it can mix words and pictures. Creators have a purpose. One purpose is to persuade, and feelings help them do it. A feeling is information, not an order. If an ad makes you feel left out, you can notice the trick and still choose. We will not share a time media really upset you.</p></div>
+              <p><strong>Do this.</strong> Model a one-line cereal box: “Champions pour this.” Feeling: wanting to be a champion. Choice: the word champions.</p>
+            </li>
+            
+            <li>
+              <h3>Guided scenario · 12 min</h3>
+              <div class="say"><p><strong>Say this.</strong> Read the made-up game ad. With a partner, name the feeling and the creator’s choice. Then say one thought a player could use so the feeling is not the boss.</p></div>
+              <p><strong>Do this.</strong> Hear two pairs. Keep real game titles off the board.</p>
+            </li>
+            
+            <li>
+              <h3>Check and close · 5 min</h3>
+              <div class="say"><p><strong>Say this.</strong> What feeling does the ad want, and what is one choice that creates it?</p></div>
+              <p><strong>Do this.</strong> Preview checking whether a claim is even true.</p>
+            </li>
+            </ol>
+        <div class="callout">
+          <p><strong>If time is short.</strong> Do the ad together. Skip the “thought a player could use” until the close, and make it your model.</p>
+          <p><strong>If you have extra time.</strong> Ask whether the ad informs, persuades, or entertains. Persuade should be the main purpose. Lesson 12 will slow this down.</p>
+        </div>
+        <h3>Made-up scenario</h3>
+        <div class="scenario">
+          <h3>The “Only winners” ad</h3>
+          <p>Made-up ad: A picture of cheering kids, a glowing controller, and the words “Only winners play SkyDash. Losers log off. Your friends are already in.” There is no price and no real company.</p>
+          <ul><li>What feeling does this aim for?</li><li>Which choice creates that feeling?</li><li>What could a player tell themselves?</li></ul>
+        </div>
+        <div class="answers">
+          <h3>Teacher answer guidance</h3>
+          <ul><li>Feelings that fit: excitement, fear of being left out, or shame about losing.</li><li>Choices: the cheering crowd, the word losers, and “your friends are already in.”</li><li>A steady thought: “This ad wants me to feel rushed. I can decide later without calling myself a loser.”</li></ul>
+          <p><strong>Quick check.</strong> What feeling does the ad want, and which words help create it?</p>
+          <p><strong>Look for.</strong> A fitting feeling linked to a real line in the ad, especially “only winners,” “losers,” or “friends are already in.”</p>
+        </div>
+        <h3>Tech-free Plan B</h3>
+        <p>Read the ad twice. Students tap the desk once when they hear a feeling-word.</p>
+        <h3>Support</h3>
+        <p>Offer a feeling bank: excited, left out, curious, annoyed, brave. Students may choose from the bank.</p>
+        <h3>Extension</h3>
+        <p>Change one line so the ad informs instead of pressuring. For example: “This game has ten levels.” The extension stays inside the block. It is not homework and not a project.</p>
+        <h2>Safety notes</h2>
+        <p>Physical activity: not applicable. There is no gym task and no equipment to set out.</p>
+        <p>If a student looks upset, let them pass and offer a quiet job such as timekeeper. Do not ask them to explain.</p>
+        <p>Do not ask students for real names, addresses, schools, photos, usernames, passwords, screen-time diaries, or upsetting personal experiences. If a student discloses harm, follow the school’s safeguarding process. Do not investigate in front of the class.</p>
+        <h2>Differentiation and inclusive supports</h2>
+        <p>A student may draw an arrow from a feeling word to a line in the ad instead of speaking.</p>
+        <p>Follow ISP supports listed in the class binder. Do not write medical details or student names into this public site or onto a slide you will publish.</p>
+        <h2>Classroom management cues</h2>
+        <p>No contest about who plays the most games. No mocking a feeling.</p>
+        <h2>Assessment</h2>
+        <p>Feeling plus a specific line meets the intention. “It is cool” is a start; ask “which words?” Feedback stays on the ad. Reassess in Lesson 12.</p>
+        <p>Use observations, conversations, and products linked to the success criteria. Feedback describes what you noticed and one next step. There is no numeric or percent grade. If you use Elk Island Public Schools’ Grades 3–6 descriptive levels, the words are Not Yet Meeting Expectations, Minimally Meeting Expectations, Solidifying Expectations, and Mastering Expectations. A student can show the skill again in a flex lesson or in a one-minute conversation. Do not file personal stories.</p>
+        <h2>Exit and clean-up</h2>
+        <p>Erase any real title a student called out, with a neutral “we are staying with the made-up ad.”</p>
+        <h2>Sub notes</h2>
+        <p>Do not play a video. The printed ad is the text. Pass is success-neutral.</p>
+        <p>The say-this lines are the lesson. Keep the 5, 8, 12, and 5 timing. Skip the extension if the clock is tight.</p>
+        <h2 id="source">Source and attribution</h2>
+        <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “Media &amp; Our Emotions” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “How does media make us feel, and why?”. The public lesson page lists this Common Sense lesson as about 20 minutes. This page is a 30-minute teacher-led adaptation and does not use the lesson video.</p>
+        <p><a href="https://www.commonsense.org/education/digital-literacy/media-our-emotions">https://www.commonsense.org/education/digital-literacy/media-our-emotions</a></p>
+        <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
+        <section class="chalkie" id="chalkie">
+          <h2>Chalkie-ready brief</h2>
+          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
+          <pre id="brief-10">Chalkie brief for Grade 4 Tech, Lesson 10: How media aims at feelings
+This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
+Unit: Credible information and media
+Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
+Question: How can a media text try to make us feel something?
+Objectives:
+- We are learning that media is made on purpose.
+- We are learning to name a feeling a text aims for, and one trick it uses.
+Suggested slides:
+1. Question: How can media aim at a feeling?
+2. Creators choose words and pictures on purpose.
+3. A feeling is information, not an order.
+4. Model: “Champions pour this.”
+5. Scenario: the SkyDash ad.
+6. Check.
+7. Close: notice the trick, then choose.
+Original scenario: The “Only winners” ad. Made-up ad: A picture of cheering kids, a glowing controller, and the words “Only winners play SkyDash. Losers log off. Your friends are already in.” There is no price and no real company.
+Discussion:
+- What feeling does this aim for?
+- Which choice creates that feeling?
+- What could a player tell themselves?
+Quick assessment: What feeling does the ad want, and which words help create it?
+Do not ask students for real personal information, passwords, photos, or upsetting experiences.
+Source idea, not a script to paste from Common Sense: Media &amp; Our Emotions — https://www.commonsense.org/education/digital-literacy/media-our-emotions</pre>
+          <div class="toolbar">
+            <button type="button" class="primary" data-copy-brief="10">Copy brief</button>
+            <span data-copy-status="10" aria-live="polite"></span>
+          </div>
+          <label for="chalkie-10">Chalkie share URL, optional, this device only</label>
+          <input id="chalkie-10" data-chalkie-url="10" type="url" placeholder="https://" autocomplete="off">
+          <p data-chalkie-msg="10">No Chalkie share link has been added on this device.</p>
+          <p><a data-chalkie-open="10" hidden>Open the link you saved</a></p>
+          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
+        </section>
+      </article>
+      <nav class="pager" aria-label="Lesson order">
+        <a class="ghost" href="../../lesson/09/">Previous: Mend the friendship</a>
+        <a class="ghost" href="../../lesson/11/">Next: Pause before you believe it</a>
+      </nav>
+    </main>
+    
+  
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
+        <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
+      </div>
+    </footer>
+    
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>
