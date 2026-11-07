@@ -19,6 +19,12 @@ OUT = ROOT
 RESOURCES = json.loads((ROOT / "assets/resources.json").read_text(encoding="utf-8"))
 
 
+def asset_version(rel: str) -> str:
+    """Content hash so browsers fetch new CSS/JS as soon as it changes."""
+    import hashlib
+    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()[:10]
+
+
 def esc(value: str) -> str:
     return html.escape(value, quote=True)
 
@@ -108,8 +114,8 @@ def footer(prefix: str) -> str:
 
 
 def page(prefix: str, title: str, body: str, current: str = "", extra_head: str = "") -> str:
-    css = f"{prefix}assets/css/site.css"
-    js = f"{prefix}assets/js/site.js"
+    css = f"{prefix}assets/css/site.css?v={asset_version('assets/css/site.css')}"
+    js = f"{prefix}assets/js/site.js?v={asset_version('assets/js/site.js')}"
     return f"""<!DOCTYPE html>
 <html lang="en-CA">
 <head>
@@ -533,7 +539,7 @@ def not_found() -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Grade 4 Tech</title>
-  <link rel="stylesheet" href="/Grade4-Tech/assets/css/site.css">
+  <link rel="stylesheet" href="/Grade4-Tech/assets/css/site.css?v=__CSSV__">
 </head>
 <body>
   <main id="main" class="main lesson-top">
@@ -578,7 +584,7 @@ def main() -> None:
     clean_lessons()
     write(OUT / "index.html", home_page())
     write(OUT / "guide" / "index.html", guide_page())
-    write(OUT / "404.html", not_found())
+    write(OUT / "404.html", not_found().replace("__CSSV__", asset_version("assets/css/site.css")))
     write(OUT / "assets" / "favicon.svg", favicon())
     for lesson in LESSONS:
         write(OUT / "lesson" / lesson["slug"] / "index.html", lesson_page(lesson))
