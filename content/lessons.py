@@ -70,7 +70,7 @@ LESSONS = [
         materials=[
             "This lesson page, or the scenario written on the board.",
             "Board headings: Points to a person / Too general.",
-            "The on-page timer, or any classroom timer.",
+            "A classroom clock or timer to follow the 5 / 8 / 12 / 5-minute teaching steps.",
         ],
         setup=[
             "Pairs as they already sit. No devices on desks.",

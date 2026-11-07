@@ -104,13 +104,17 @@ class SiteTests(unittest.TestCase):
             parser.feed(text)
             positions = [parser.h2.index(heading) for heading in HEADINGS]
             self.assertEqual(positions, sorted(positions))
-            self.assertIn("No Chalkie deck is linked", text)
+            self.assertIn("Download PowerPoint", text)
+            self.assertIn('datetime="2026-11-07"', text)
+            self.assertNotIn('id="timer"', text)
             self.assertIn("Follow ISP supports listed in the class binder.", text)
             self.assertIn("Physical activity: not applicable.", text)
             self.assertIn(lesson["source_url"], text)
             self.assertNotIn("https://chalkie", text.lower())
             self.assertNotRegex(text, r'href="/')
-            self.assertIn("data-chalkie-url", text)
+            self.assertNotIn("data-chalkie-url", text)
+            self.assertNotIn("Optional planning brief", text)
+            self.assertNotIn('id="chalkie"', text)
             self.assertNotIn('value="https://chalkie', text)
 
     def test_language_and_scope(self):

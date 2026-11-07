@@ -21,10 +21,10 @@ Lesson addresses look like `http://127.0.0.1:8765/lesson/01/`. On GitHub Pages t
 
 - Home year map for six units, with search and filters for unit and core or flex.
 - Eighteen lesson pages. Each one can be taught without a device.
-- A 30-minute timer split 5 / 8 / 12 / 5.
+- Printed 30-minute teaching steps split 5 / 8 / 12 / 5, without a countdown timer.
 - Device-local stamps and a device-local “current lesson.” Nothing is uploaded and there is no roster.
 - A student view for the projector. It is a presentation toggle, not a lock.
-- A Chalkie-ready brief and an empty share-URL field on every lesson.
+- Completed Chalkie links near the top of Lessons 1–7, without bottom Chalkie notes or planning briefs. Lessons 8–18 are paused.
 - A teacher guide.
 
 ## Content layout
@@ -43,13 +43,13 @@ python3 tools/build_site.py
 python3 tests/test_site.py
 ```
 
-The tests check the 18-lesson structure, the 5 + 8 + 12 + 5 timing, heading order, outcome bundles, relative links, the empty Chalkie field, and a few scope rules. They do not start a browser.
+The tests check the 18-lesson structure, the 5 + 8 + 12 + 5 timing, heading order, outcome bundles, relative links, the PowerPoint resource button, fixed update date, absence of the countdown, and a few scope rules. They do not start a browser.
 
 ## Deploy
 
-`.github/workflows/pages.yml` runs the tests on pull requests and on `main`. A push to `main` also uploads the site with GitHub’s Pages actions.
+Generated HTML and static assets are committed to `main`. The live site is published from the branch root by GitHub Pages.
 
-This repository’s Pages source has not been switched on from here, and no live deployment is claimed. A repository admin still needs to set Settings → Pages → Build and deployment → Source to **GitHub Actions**. Until that is saved, the workflow can succeed at testing and still have nowhere to publish.
+The existing Actions workflow is retained; its separate deployment job is not the branch-based Pages publication path. Do not change Pages settings solely to match that workflow.
 
 Do not change account settings from an unattended run.
 
@@ -66,9 +66,13 @@ Lesson ideas are adapted from Common Sense Education’s Grade 4 [Digital Litera
 
 ## Limitations
 
-- No Chalkie account, deck, or share link was provided. The share-URL boxes are empty on purpose. Do not treat the copy button as a link to a live deck.
+- Chalkie Lessons 1–7 are linked; creation of Lessons 8–18 is paused. Bottom Chalkie planning notes and local share fields have been removed.
 - The year map uses approximate September-to-June blocks. It is not a booked school calendar.
 - Stamps and saved links live in the browser only.
 - The student view does not protect teacher notes from someone who can view source.
 - There is no class roster and no place to store student personal information.
 - Official videos, card games, and worksheets from Common Sense are not embedded.
+
+## Teaching materials updated 7 November 2026
+
+Each lesson links its six-slide Canva presentation, a PowerPoint exported from Canva, and the official Common Sense lesson page with teacher-sign-in notes. Lessons 1–7 also link completed Chalkie lessons; creation of Lessons 8–18 is paused. The shared top countdown timer is removed, and the page shows a fixed last-updated date. The 30-minute 5/8/12/5 teaching sequence and full scripts are retained.
