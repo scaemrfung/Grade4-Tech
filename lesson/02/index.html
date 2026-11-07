@@ -16,8 +16,8 @@
       <div class="wrap header-row">
         <a class="brand" href="../../index.html">
           <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
-            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
-            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+            <rect width="42" height="42" rx="10" fill="#fff7ed"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#9a3412"/>
           </svg>
           <span>
             <strong>Grade 4 Tech</strong>
@@ -32,22 +32,8 @@
       </div>
     </header>
     
+  <div class="wrap updated teacher-chrome">Last updated: <time datetime="2026-11-07">7 November 2026</time></div>
   
-    <div class="timer-bar" id="timer">
-      <div class="wrap timer-inner">
-        <div>
-          <div class="time-readout" id="time-readout">05:00</div>
-          <div id="segment-name">Opening</div>
-        </div>
-        <button type="button" class="primary" id="timer-toggle">Start</button>
-        <button type="button" class="ghost" id="timer-reset">Reset</button>
-        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
-        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
-        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
-        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
-        <p id="timer-live" class="sr-live" aria-live="polite"></p>
-      </div>
-    </div>
     <main id="main" class="wrap lesson-top">
       <p class="kicker">Lesson 2 of 18 · Core lesson</p>
       <h1>When is sharing a bigger risk?</h1>
@@ -67,10 +53,29 @@
         <button type="button" class="ghost" data-make-current="02">Set as current lesson</button>
         <button type="button" class="ghost" id="print-student">Print student card</button>
         <a class="ghost" href="#sequence">Jump to script</a>
-        <a class="ghost" href="#chalkie">Chalkie brief</a>
+        <a class="ghost" href="#teaching-resources">Slides and teaching materials</a>
       </div>
       <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
       <p id="current-status" aria-live="polite"></p>
+      <section class="card teaching-resources teacher-chrome" id="teaching-resources" aria-labelledby="resources-title">
+      <h2 id="resources-title">Open these to teach</h2>
+      <div class="toolbar">
+        <a class="primary" href="../../assets/pptx/grade4-tech-lesson02.pptx" download>Download PowerPoint</a>
+        <a class="ghost" href="https://www.canva.com/design/DAHaNCiBhmc/YMGMQk6lAlBYiNXVYRQR9w/edit">Open matching Canva slides</a>
+        <a class="ghost" href="#sequence">Read the teaching script</a>
+      </div>
+      <p>PowerPoint exported from the matching six-slide Canva presentation. Keep this page open for the teacher directions and answer guidance.</p>
+      <p><a href="https://www.commonsense.org/education/digital-literacy/pii-whats-the-risk-factor">Official Common Sense lesson and materials</a>: Lesson Slides; Video (listed on the official lesson page). This opens the official lesson page, not a direct media file. Sign in with a free teacher account to access its materials. Our Canva and Chalkie lessons are original adaptations.</p>
+      <p><a class="primary" href="https://app.chalkie.ai/lessons/a32b2824-1711-4767-8c3d-6938bfacd954?ref=9UhRdFqg">Open Chalkie lesson 2</a></p><p>Six slides, question visuals and 30-minute teacher notes. These are original adapted lessons, not official Common Sense slides.</p>
+      <details><summary>Quick teaching steps · 30 minutes</summary>
+        <ol><li><strong>Before class:</strong> Open the PowerPoint or Canva presentation. Read the scenario and answer guidance below. If using an official video or handout, sign in and preview it first.</li>
+        <li><strong>Opening · 5 minutes:</strong> Show the title and big question. Invite made-up examples only; students may pass.</li>
+        <li><strong>Explain · 8 minutes:</strong> Use Learn It and model the safe move. If using a video, fit it into this block rather than adding time.</li>
+        <li><strong>Activity · 12 minutes:</strong> Use Try It Together, then Talk About It. Follow the script and let pairs think before showing answer guidance.</li>
+        <li><strong>Close · 5 minutes:</strong> Use Exit Check. Listen for the success criteria and record a short observation.</li></ol>
+        <p>No projector? Read the same scenario aloud and use the tech-free Plan B below. No student devices or accounts are needed.</p>
+      </details>
+    </section>
       
     <section class="card student-face" id="for-students">
       <p class="kicker">For students</p>
@@ -189,42 +194,7 @@
         <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “PII: What&#x27;s the Risk Factor?” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “When should I be cautious about sharing personal information online?”. The public lesson page lists this Common Sense lesson as about 20 minutes. This page is a 30-minute teacher-led adaptation.</p>
         <p><a href="https://www.commonsense.org/education/digital-literacy/pii-whats-the-risk-factor">https://www.commonsense.org/education/digital-literacy/pii-whats-the-risk-factor</a></p>
         <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
-        <section class="chalkie" id="chalkie">
-          <h2>Chalkie-ready brief</h2>
-          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
-          <pre id="brief-02">Chalkie brief for Grade 4 Tech, Lesson 2: When is sharing a bigger risk?
-This is a prompt for a future deck. It is not a claim that a Chalkie lesson already exists.
-Unit: Privacy and safety
-Time: 30 minutes. Suggested timing: 5 minute opening, 8 minute explain, 12 minute discussion, 5 minute check.
-Question: When should we be more careful about personal details?
-Objectives:
-- We are learning that the same detail can be a smaller or bigger risk depending on who asks and why.
-Suggested slides:
-1. Question: When is sharing a bigger risk?
-2. Three questions: Who? Why? What could go wrong?
-3. Warning signs: rush, prize, secret, stranger, password.
-4. Scenario: teacher’s class list and a prize pop-up.
-5. Discussion in pairs.
-6. Check: which request to refuse.
-7. Close: a lower-risk situation is still not an invitation to add extra details.
-Original scenario: Two requests for Riley. Request A: The teacher says, “I already have the class list. Please just open your book.” Request B: A pop-up in a game says, “You won a tablet. Type your full name, home address, and password in the next 60 seconds.”
-Discussion:
-- Who is asking in each request?
-- Why would they need the detail?
-- What could go wrong?
-Quick assessment: Which request should Riley refuse, and what is one warning sign?
-Do not ask students for real personal information, passwords, photos, or upsetting experiences.
-Source idea, not a script to paste from Common Sense: PII: What&#x27;s the Risk Factor? — https://www.commonsense.org/education/digital-literacy/pii-whats-the-risk-factor</pre>
-          <div class="toolbar">
-            <button type="button" class="primary" data-copy-brief="02">Copy brief</button>
-            <span data-copy-status="02" aria-live="polite"></span>
-          </div>
-          <label for="chalkie-02">Chalkie share URL, optional, this device only</label>
-          <input id="chalkie-02" data-chalkie-url="02" type="url" placeholder="https://" autocomplete="off">
-          <p data-chalkie-msg="02">No Chalkie share link has been added on this device.</p>
-          <p><a data-chalkie-open="02" hidden>Open the link you saved</a></p>
-          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
-        </section>
+
       </article>
       <nav class="pager" aria-label="Lesson order">
         <a class="ghost" href="../../lesson/01/">Previous: What counts as personal information?</a>
@@ -235,7 +205,7 @@ Source idea, not a script to paste from Common Sense: PII: What&#x27;s the Risk 
   
     <footer class="site-footer">
       <div class="wrap">
-        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps and the current lesson stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
         <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
         <p><a href="../../guide/">Teacher guide</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/pde4">Grade 4 Physical Education and Wellness</a> · <a href="https://curriculum.learnalberta.ca/curriculum/en/c/laneng4">Grade 4 English Language Arts and Literature</a> · <a href="https://curriculum.learnalberta.ca/cdn/assets/public/e6fa142a-67a9-5b77-bea5-ba27756a0247/ictpos.pdf">ICT program of studies (PDF)</a></p>
       </div>
