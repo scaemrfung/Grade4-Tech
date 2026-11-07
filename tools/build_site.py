@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import html
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -15,6 +16,7 @@ from content.lessons import LESSONS, UNITS  # noqa: E402
 from content.outcomes import BUNDLES, ELAL, ICT, PEW  # noqa: E402
 
 OUT = ROOT
+RESOURCES = json.loads((ROOT / "assets/resources.json").read_text(encoding="utf-8"))
 
 
 def esc(value: str) -> str:
@@ -50,8 +52,8 @@ def nav(prefix: str, current: str = "") -> str:
       <div class="wrap header-row">
         <a class="brand" href="{prefix}index.html">
           <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true">
-            <rect width="42" height="42" rx="10" fill="#f6f0e6"/>
-            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#1d4a38"/>
+            <rect width="42" height="42" rx="10" fill="#fff7ed"/>
+            <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#9a3412"/>
           </svg>
           <span>
             <strong>Grade 4 Tech</strong>
@@ -72,7 +74,7 @@ def footer(prefix: str) -> str:
     return f"""
     <footer class="site-footer">
       <div class="wrap">
-        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps, the current lesson, and any Chalkie link you paste stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
+        <p>Grade 4 Tech is a public teaching site for a regular classroom in Alberta. Stamps and the current lesson stay in this browser. Nothing is uploaded. The student and teacher views are a presentation toggle, not a lock.</p>
         <p>Ideas are adapted in original words from Common Sense Education’s Grade 4 Digital Literacy &amp; Well-Being lessons. Host outcomes are quoted from new LearnAlberta. ICT outcomes are quoted from the Division 2 program of studies and are marked working toward.</p>
         <p><a href="{prefix}guide/">Teacher guide</a> · <a href="{PEW}">Grade 4 Physical Education and Wellness</a> · <a href="{ELAL}">Grade 4 English Language Arts and Literature</a> · <a href="{ICT}">ICT program of studies (PDF)</a></p>
       </div>
@@ -97,6 +99,7 @@ def page(prefix: str, title: str, body: str, current: str = "", extra_head: str 
 <body class="mode-teacher">
   <a class="skip" href="#main">Skip to content</a>
   {nav(prefix, current)}
+  <div class="wrap updated teacher-chrome">Last updated: <time datetime="2026-11-07">7 November 2026</time></div>
   {body}
   {footer(prefix)}
   <script src="{js}"></script>
@@ -152,6 +155,41 @@ def chalkie_text(lesson: dict, unit: dict) -> str:
     return "\n".join(lines)
 
 
+
+def chalkie_status(lesson: dict) -> str:
+    url = RESOURCES[str(lesson["n"])]["chalkie"]
+    if url:
+        return f'<p><a class="primary" href="{esc(url)}">Open Chalkie lesson {lesson["n"]}</a></p><p>Six slides, question visuals and 30-minute teacher notes. These are original adapted lessons, not official Common Sense slides.</p>'
+    return '<p>No completed Chalkie lesson is linked for this lesson. Creation of Lessons 8–18 is paused. Use the Canva slides, PowerPoint and full teaching script below.</p>'
+
+
+def teaching_resources(lesson: dict, prefix: str) -> str:
+    item = RESOURCES[str(lesson["n"])]
+    media = ["Lesson Slides"]
+    if item["handout"]:
+        media.append("Handout")
+    if item["video"]:
+        media.append("Video (listed on the official lesson page)")
+    return f'''<section class="card teaching-resources teacher-chrome" id="teaching-resources" aria-labelledby="resources-title">
+      <h2 id="resources-title">Open these to teach</h2>
+      <div class="toolbar">
+        <a class="primary" href="{prefix}{esc(item["pptx"])}" download>Download PowerPoint</a>
+        <a class="ghost" href="{esc(item["canva"])}">Open matching Canva slides</a>
+        <a class="ghost" href="#sequence">Read the teaching script</a>
+      </div>
+      <p>PowerPoint exported from the matching six-slide Canva presentation. Keep this page open for the teacher directions and answer guidance.</p>
+      <p><a href="{esc(item["official"])}">Official Common Sense lesson and materials</a>: {esc("; ".join(media))}. This opens the official lesson page, not a direct media file. Sign in with a free teacher account to access its materials. Our Canva and Chalkie lessons are original adaptations.</p>
+      {chalkie_status(lesson)}
+      <details><summary>Quick teaching steps · 30 minutes</summary>
+        <ol><li><strong>Before class:</strong> Open the PowerPoint or Canva presentation. Read the scenario and answer guidance below. If using an official video or handout, sign in and preview it first.</li>
+        <li><strong>Opening · 5 minutes:</strong> Show the title and big question. Invite made-up examples only; students may pass.</li>
+        <li><strong>Explain · 8 minutes:</strong> Use Learn It and model the safe move. If using a video, fit it into this block rather than adding time.</li>
+        <li><strong>Activity · 12 minutes:</strong> Use Try It Together, then Talk About It. Follow the script and let pairs think before showing answer guidance.</li>
+        <li><strong>Close · 5 minutes:</strong> Use Exit Check. Listen for the success criteria and record a short observation.</li></ol>
+        <p>No projector? Read the same scenario aloud and use the tech-free Plan B below. No student devices or accounts are needed.</p>
+      </details>
+    </section>'''
+
 def lesson_page(lesson: dict) -> str:
     unit = unit_by_id(lesson["unit"])
     prefix = prefix_for(2)
@@ -179,7 +217,6 @@ def lesson_page(lesson: dict) -> str:
         if next_lesson
         else "<span></span>"
     )
-    brief = chalkie_text(lesson, unit)
     student = f"""
     <section class="card student-face" id="for-students">
       <p class="kicker">For students</p>
@@ -200,21 +237,6 @@ def lesson_page(lesson: dict) -> str:
     </section>
     """
     body = f"""
-    <div class="timer-bar" id="timer">
-      <div class="wrap timer-inner">
-        <div>
-          <div class="time-readout" id="time-readout">05:00</div>
-          <div id="segment-name">Opening</div>
-        </div>
-        <button type="button" class="primary" id="timer-toggle">Start</button>
-        <button type="button" class="ghost" id="timer-reset">Reset</button>
-        <button type="button" class="ghost seg" data-seg="0">Opening 5</button>
-        <button type="button" class="ghost seg" data-seg="1">Explain 8</button>
-        <button type="button" class="ghost seg" data-seg="2">Activity 12</button>
-        <button type="button" class="ghost seg" data-seg="3">Close 5</button>
-        <p id="timer-live" class="sr-live" aria-live="polite"></p>
-      </div>
-    </div>
     <main id="main" class="wrap lesson-top">
       <p class="kicker">Lesson {lesson["n"]} of 18 · {esc(kind)}</p>
       <h1>{esc(lesson["title"])}</h1>
@@ -234,10 +256,11 @@ def lesson_page(lesson: dict) -> str:
         <button type="button" class="ghost" data-make-current="{lesson["slug"]}">Set as current lesson</button>
         <button type="button" class="ghost" id="print-student">Print student card</button>
         <a class="ghost" href="#sequence">Jump to script</a>
-        <a class="ghost" href="#chalkie">Chalkie brief</a>
+        <a class="ghost" href="#teaching-resources">Slides and teaching materials</a>
       </div>
       <p id="view-status" class="local-note teacher-chrome">Teacher view. Students can still open this public page. The toggle is not a lock.</p>
       <p id="current-status" aria-live="polite"></p>
+      {teaching_resources(lesson, prefix)}
       {student}
       <article class="teacher-only">
         <h2>Curriculum outcomes</h2>
@@ -300,20 +323,7 @@ def lesson_page(lesson: dict) -> str:
         <p>This script is original. The idea is adapted from Common Sense Education’s Grade 4 lesson “{esc(lesson["source_title"])}” in the Digital Literacy &amp; Well-Being curriculum. Essential question on the public page: “{esc(lesson["essential"])}”. {esc(lesson["source_time"])}</p>
         <p><a href="{esc(lesson["source_url"])}">{esc(lesson["source_url"])}</a></p>
         <p>Official Common Sense plans, videos, and files are free and require a teacher account. This site does not copy those scripts, games, or artwork. Older Digital Citizenship lessons are being archived in December 2026; this year uses the newer curriculum.</p>
-        <section class="chalkie" id="chalkie">
-          <h2>Chalkie-ready brief</h2>
-          <p><strong>No Chalkie deck is linked.</strong> A share link was not supplied, and none has been invented. The lesson above is complete without Chalkie. The box below is a prompt you can paste into Chalkie later if you choose to build a deck.</p>
-          <pre id="brief-{lesson["slug"]}">{esc(brief)}</pre>
-          <div class="toolbar">
-            <button type="button" class="primary" data-copy-brief="{lesson["slug"]}">Copy brief</button>
-            <span data-copy-status="{lesson["slug"]}" aria-live="polite"></span>
-          </div>
-          <label for="chalkie-{lesson["slug"]}">Chalkie share URL, optional, this device only</label>
-          <input id="chalkie-{lesson["slug"]}" data-chalkie-url="{lesson["slug"]}" type="url" placeholder="https://" autocomplete="off">
-          <p data-chalkie-msg="{lesson["slug"]}">No Chalkie share link has been added on this device.</p>
-          <p><a data-chalkie-open="{lesson["slug"]}" hidden>Open the link you saved</a></p>
-          <p>Leave the box empty until you have a real share link from your own Chalkie lesson. Saving a link here does not create a deck and does not send it anywhere.</p>
-        </section>
+
       </article>
       <nav class="pager" aria-label="Lesson order">
         {pager_prev}
@@ -436,14 +446,14 @@ def guide_page() -> str:
       <h2>How to teach from a page</h2>
       <ul>
         <li>Open the lesson. Read the say-this lines. They are the script.</li>
-        <li>Use the timer if you want the 5, 8, 12, and 5 blocks visible.</li>
+        <li>Follow the printed 5, 8, 12, and 5-minute steps. The top countdown timer has been removed.</li>
         <li>Stamp the lesson when you have taught it. The stamp stays on this device only.</li>
         <li>Set the current lesson so the home page opens the right place next time, on this device.</li>
         <li>Student view shows intentions, I can statements, and instructions. It is a presentation toggle, not security. Do not type private information into the site.</li>
       </ul>
       <h2>Chalkie</h2>
       <div class="callout">
-        <p><strong>Actual Chalkie decks and share links are not on this site.</strong> None were supplied, and none were invented. Each lesson has a Chalkie-ready brief with a copy button. The share-URL box starts empty. Paste a real link later if you make a deck. The on-page lesson is teachable before that happens. There is no button that pretends a deck already exists.</p>
+        <p>Lessons 1–7 link to complete Chalkie lessons with question visuals and teacher notes. Creation of Lessons 8–18 is paused. Every lesson has matching Canva slides and a downloadable PowerPoint exported from Canva. Use the on-page script for teaching directions; the PowerPoint download is the presentation, not a replacement for the teacher notes.</p>
       </div>
       <h2>Common Sense Education</h2>
       <p>Each lesson names a Grade 4 source from the <a href="https://www.commonsense.org/education/digital-literacy">Digital Literacy &amp; Well-Being curriculum</a>. The scripts, scenarios, and checks on this site are original. Common Sense’s full plans, videos, and files need a free teacher account. Where the public page listed a time, the lesson says so. Where it did not, this site does not invent a duration. Common Sense has said older Digital Citizenship lessons will be archived in December 2026, so this year uses the newer lessons.</p>
@@ -495,8 +505,8 @@ def not_found() -> str:
 
 def favicon() -> str:
     return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
-  <rect width="42" height="42" rx="10" fill="#1d4a38"/>
-  <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#f6f0e6"/>
+  <rect width="42" height="42" rx="10" fill="#9a3412"/>
+  <path d="M21 8l8 14h-5l4 10H14l4-10H13z" fill="#fff7ed"/>
 </svg>
 """
 

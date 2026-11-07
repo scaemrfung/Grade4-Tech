@@ -168,89 +168,6 @@
     });
   }
 
-  function format(seconds) {
-    var m = Math.floor(seconds / 60);
-    var s = seconds % 60;
-    return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
-  }
-
-  function initTimer() {
-    var root = document.getElementById("timer");
-    if (!root) return;
-    var segments = [
-      { name: "Opening", seconds: 5 * 60 },
-      { name: "Explain", seconds: 8 * 60 },
-      { name: "Activity", seconds: 12 * 60 },
-      { name: "Close", seconds: 5 * 60 }
-    ];
-    var index = 0;
-    var left = segments[0].seconds;
-    var running = false;
-    var tick = null;
-    var readout = document.getElementById("time-readout");
-    var name = document.getElementById("segment-name");
-    var live = document.getElementById("timer-live");
-
-    function paint() {
-      readout.textContent = format(left);
-      name.textContent = segments[index].name;
-      root.querySelectorAll("[data-seg]").forEach(function (btn) {
-        btn.setAttribute("aria-pressed", String(Number(btn.getAttribute("data-seg")) === index));
-      });
-    }
-
-    function stop() {
-      running = false;
-      if (tick) clearInterval(tick);
-      tick = null;
-      var pause = document.getElementById("timer-toggle");
-      if (pause) pause.textContent = "Start";
-    }
-
-    function start() {
-      if (running) return;
-      running = true;
-      document.getElementById("timer-toggle").textContent = "Pause";
-      tick = setInterval(function () {
-        if (left > 0) {
-          left -= 1;
-          paint();
-          return;
-        }
-        if (index < segments.length - 1) {
-          index += 1;
-          left = segments[index].seconds;
-          if (live) live.textContent = segments[index].name + " started.";
-          paint();
-          return;
-        }
-        stop();
-        if (live) live.textContent = "30 minutes complete.";
-      }, 1000);
-    }
-
-    document.getElementById("timer-toggle").addEventListener("click", function () {
-      if (running) stop();
-      else start();
-    });
-    document.getElementById("timer-reset").addEventListener("click", function () {
-      stop();
-      index = 0;
-      left = segments[0].seconds;
-      paint();
-      if (live) live.textContent = "Timer reset to the opening.";
-    });
-    root.querySelectorAll("[data-seg]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        stop();
-        index = Number(btn.getAttribute("data-seg"));
-        left = segments[index].seconds;
-        paint();
-      });
-    });
-    paint();
-  }
-
   function chalkieKey(id) {
     return PREFIX + "-chalkie-" + id;
   }
@@ -324,7 +241,6 @@
     initStamps();
     initCurrent();
     initFilters();
-    initTimer();
     initChalkie();
     initPrint();
   });
