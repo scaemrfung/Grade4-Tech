@@ -1,0 +1,160 @@
+name: Import Canva PowerPoints
+
+on:
+  workflow_dispatch:
+    inputs:
+      sources_json:
+        description: 'JSON array of {lesson:"01".."18", url, sha256, bytes}'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-canva-powerpoints
+  cancel-in-progress: false
+
+jobs:
+  import:
+    if: github.repository == 'scaemrfung/Grade4-Tech' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Guard repository and ref
+        env:
+          REPO: ${{ github.repository }}
+          REF: ${{ github.ref }}
+        run: |
+          if [ "$REPO" != "scaemrfung/Grade4-Tech" ] || [ "$REF" != "refs/heads/main" ]; then
+            echo "Rejected: wrong repository or ref." >&2
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Download and validate PPTX files
+        env:
+          SOURCES_JSON: ${{ inputs.sources_json }}
+        shell: python3 {0}
+        run: |
+          import hashlib, json, os, re, shutil, sys, tempfile, urllib.request, zipfile
+          from urllib.parse import urlsplit
+
+          MAX_DECLARED = 25 * 1024 * 1024
+          STREAM_LIMIT = 32 * 1024 * 1024
+          EXPECTED = {f"{i:02d}" for i in range(1, 19)}
+          SLIDE_RE = re.compile(r"^ppt/slides/slide\d+\.xml$")
+
+          def fail(msg):
+              print(f"::error::{msg}")
+              sys.exit(1)
+
+          def host_ok(h):
+              h = (h or "").lower().rstrip(".")
+              return h == "canva.com" or h.endswith(".canva.com")
+
+          class NoAuthRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  p = urlsplit(newurl)
+                  if p.scheme != "https" or not host_ok(p.hostname):
+                      fail("Redirect to a non-allowed host was refused.")
+                  return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+          opener = urllib.request.build_opener(NoAuthRedirect)
+
+          try:
+              items = json.loads(os.environ.get("SOURCES_JSON", ""))
+          except Exception:
+              fail("sources_json is not valid JSON.")
+          if not isinstance(items, list) or len(items) != 18:
+              fail("sources_json must be an array of exactly 18 entries.")
+
+          seen = set()
+          for it in items:
+              if not isinstance(it, dict) or set(it) != {"lesson", "url", "sha256", "bytes"}:
+                  fail("Each entry must have exactly lesson, url, sha256, bytes.")
+              les = it["lesson"]
+              if not isinstance(les, str) or les not in EXPECTED or les in seen:
+                  fail("Lessons must be unique strings 01..18.")
+              seen.add(les)
+              if not isinstance(it["sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", it["sha256"]):
+                  fail(f"Lesson {les}: sha256 must be 64 lowercase hex.")
+              b = it["bytes"]
+              if not isinstance(b, int) or isinstance(b, bool) or b <= 0 or b > MAX_DECLARED:
+                  fail(f"Lesson {les}: bytes must be 1..25MB.")
+              u = it["url"]
+              p = urlsplit(u) if isinstance(u, str) else None
+              if not p or p.scheme != "https" or not host_ok(p.hostname) or p.username or p.password:
+                  fail(f"Lesson {les}: URL must be HTTPS on canva.com without credentials.")
+          if seen != EXPECTED:
+              fail("Lessons 01..18 must all be present.")
+
+          tmp = tempfile.mkdtemp(prefix="pptx-")
+          try:
+              for it in sorted(items, key=lambda x: x["lesson"]):
+                  les = it["lesson"]
+                  dest = os.path.join(tmp, f"grade4-tech-lesson{les}.pptx")
+                  req = urllib.request.Request(it["url"], headers={"User-Agent": "grade4-pptx-import"})
+                  h = hashlib.sha256(); n = 0
+                  try:
+                      with opener.open(req, timeout=60) as r, open(dest, "wb") as f:
+                          while True:
+                              chunk = r.read(65536)
+                              if not chunk:
+                                  break
+                              n += len(chunk)
+                              if n > STREAM_LIMIT:
+                                  fail(f"Lesson {les}: download exceeded streaming limit.")
+                              h.update(chunk); f.write(chunk)
+                  except SystemExit:
+                      raise
+                  except Exception as e:
+                      fail(f"Lesson {les}: download failed ({type(e).__name__}).")
+                  if n != it["bytes"]:
+                      fail(f"Lesson {les}: size mismatch.")
+                  if h.hexdigest() != it["sha256"]:
+                      fail(f"Lesson {les}: sha256 mismatch.")
+                  try:
+                      with zipfile.ZipFile(dest) as z:
+                          if z.testzip() is not None:
+                              fail(f"Lesson {les}: corrupt zip member.")
+                          names = z.namelist()
+                          if "[Content_Types].xml" not in names:
+                              fail(f"Lesson {les}: not a PPTX.")
+                          slides = [x for x in names if SLIDE_RE.match(x)]
+                          if len(slides) != 6:
+                              fail(f"Lesson {les}: expected 6 slides, found {len(slides)}.")
+                  except zipfile.BadZipFile:
+                      fail(f"Lesson {les}: invalid zip.")
+                  print(f"Lesson {les}: validated.")
+
+              out = os.path.join("assets", "pptx")
+              os.makedirs(out, exist_ok=True)
+              for les in sorted(EXPECTED):
+                  name = f"grade4-tech-lesson{les}.pptx"
+                  shutil.move(os.path.join(tmp, name), os.path.join(out, name))
+              print("All 18 files validated and staged.")
+          finally:
+              shutil.rmtree(tmp, ignore_errors=True)
+
+      - name: Commit and push (no force)
+        run: |
+          set -euo pipefail
+          paths=()
+          for i in $(seq -w 1 18); do paths+=("assets/pptx/grade4-tech-lesson${i}.pptx"); done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${paths[@]}"
+          if git diff --cached --quiet -- "${paths[@]}"; then
+            echo "No changes: files already identical."
+            exit 0
+          fi
+          other=$(git diff --cached --name-only | grep -vxF -f <(printf '%s\n' "${paths[@]}") || true)
+          if [ -n "$other" ]; then echo "Unexpected staged paths." >&2; exit 1; fi
+          git commit -m "Import Grade 4 Tech Canva PowerPoints (lessons 01-18)" -- "${paths[@]}"
+          git push origin HEAD:refs/heads/main
