@@ -24,7 +24,7 @@ Lesson addresses look like `http://127.0.0.1:8765/lesson/01/`. On GitHub Pages t
 - Printed 30-minute teaching steps split 5 / 8 / 12 / 5, without a countdown timer.
 - Device-local stamps and a device-local “current lesson.” Nothing is uploaded and there is no roster.
 - A student view for the projector. It is a presentation toggle, not a lock.
-- Completed Chalkie links near the top of Lessons 1–7, without bottom Chalkie notes or planning briefs. Lessons 8–18 are paused.
+- Completed Chalkie links near the top of all 18 lessons, without bottom Chalkie notes or planning briefs.
 - A teacher guide.
 
 ## Content layout
@@ -66,13 +66,13 @@ Lesson ideas are adapted from Common Sense Education’s Grade 4 [Digital Litera
 
 ## Limitations
 
-- Chalkie Lessons 1–7 are linked; creation of Lessons 8–18 is paused. Bottom Chalkie planning notes and local share fields have been removed.
+- Chalkie lessons are linked for all 18 lessons. Bottom Chalkie planning notes and local share fields have been removed.
 - The year map uses approximate September-to-June blocks. It is not a booked school calendar.
 - Stamps and saved links live in the browser only.
 - The student view does not protect teacher notes from someone who can view source.
 - There is no class roster and no place to store student personal information.
 - Official videos, card games, and worksheets from Common Sense are not embedded.
 
-## Teaching materials updated 7 November 2026
+## Teaching materials updated 10 November 2026
 
-Each lesson links its six-slide Canva presentation, a PowerPoint exported from Canva, and the official Common Sense lesson page with teacher-sign-in notes. Lessons 1–7 also link completed Chalkie lessons; creation of Lessons 8–18 is paused. The shared top countdown timer is removed, and the page shows a fixed last-updated date. The 30-minute 5/8/12/5 teaching sequence and full scripts are retained.
+Each lesson links its six-slide Canva presentation, a PowerPoint exported from Canva, the official Common Sense lesson page with teacher-sign-in notes, and a completed Chalkie lesson. The shared top countdown timer is removed, and the page shows a fixed last-updated date. The 30-minute 5/8/12/5 teaching sequence and full scripts are retained.

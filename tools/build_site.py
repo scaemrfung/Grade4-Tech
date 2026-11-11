@@ -41,8 +41,8 @@ def lesson_href(prefix: str, lesson: dict) -> str:
     return f"{prefix}lesson/{lesson['slug']}/"
 
 
-UPDATED_ISO = "2026-11-07"
-UPDATED_TEXT = "7 November 2026"
+UPDATED_ISO = "2026-11-10"
+UPDATED_TEXT = "10 November 2026"
 
 
 def updated_stamp() -> str:
@@ -195,7 +195,7 @@ def chalkie_status(lesson: dict) -> str:
     url = RESOURCES[str(lesson["n"])]["chalkie"]
     if url:
         return f'<p><a class="primary" href="{esc(url)}">Open Chalkie lesson {lesson["n"]}</a></p><p>Six slides, question visuals and 30-minute teacher notes. These are original adapted lessons, not official Common Sense slides.</p>'
-    return '<p>No completed Chalkie lesson is linked for this lesson. Creation of Lessons 8–18 is paused. Use the Canva slides, PowerPoint and full teaching script below.</p>'
+    return '<p>No completed Chalkie lesson is linked for this lesson. Use the Canva slides, PowerPoint and full teaching script below.</p>'
 
 
 def teaching_resources(lesson: dict, prefix: str) -> str:
@@ -511,7 +511,7 @@ def guide_page() -> str:
       </ul>
       <h2>Chalkie</h2>
       <div class="callout">
-        <p>Lessons 1–7 link to complete Chalkie lessons with question visuals and teacher notes. Creation of Lessons 8–18 is paused. Every lesson has matching Canva slides and a downloadable PowerPoint exported from Canva. Use the on-page script for teaching directions; the PowerPoint download is the presentation, not a replacement for the teacher notes.</p>
+        <p>Every lesson links to a complete Chalkie lesson with question visuals and teacher notes. Every lesson also has matching Canva slides and a downloadable PowerPoint exported from Canva. Use the on-page script for teaching directions; the PowerPoint download is the presentation, not a replacement for the teacher notes.</p>
       </div>
       <h2>Common Sense Education</h2>
       <p>Each lesson names a Grade 4 source from the <a href="https://www.commonsense.org/education/digital-literacy">Digital Literacy &amp; Well-Being curriculum</a>. The scripts, scenarios, and checks on this site are original. Common Sense’s full plans, videos, and files need a free teacher account. Where the public page listed a time, the lesson says so. Where it did not, this site does not invent a duration. Common Sense has said older Digital Citizenship lessons will be archived in December 2026, so this year uses the newer lessons.</p>
